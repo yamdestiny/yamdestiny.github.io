@@ -1,0 +1,1352 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=6.3.0" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.3.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico?v=6.3.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico?v=6.3.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.3.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '6.3.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="关于日期、时间、时间戳与时区的整理">
+<meta name="keywords" content="Time,Date,Timestamp">
+<meta property="og:type" content="article">
+<meta property="og:title" content="日期与时间">
+<meta property="og:url" content="https://yamdestiny.xyz/2019/02/27/date-and-time/index.html">
+<meta property="og:site_name" content="Yamdestiny">
+<meta property="og:description" content="关于日期、时间、时间戳与时区的整理">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2024-03-14T10:33:10.247Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="日期与时间">
+<meta name="twitter:description" content="关于日期、时间、时间戳与时区的整理">
+
+
+
+
+
+
+  <link rel="canonical" href="https://yamdestiny.xyz/2019/02/27/date-and-time/">
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>日期与时间 | Yamdestiny</title>
+  
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-92396016-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-92396016-1');
+</script>
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?4eacbd1e85d8eebe356b663a83063d78";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Yamdestiny</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-series">
+    <a href="/series/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>系列</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-resource">
+    <a href="/resource/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-file"></i> <br>资源</a>
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+  
+  
+  
+    
+      
+    
+    <a href="https://github.com/YamDestiny" class="github-corner" target="_blank" title="Follow me on GitHub" aria-label="Follow me on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#222; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg>
+    
+      </a>
+    
+
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yamdestiny.xyz/2019/02/27/date-and-time/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="YamDestiny">
+      <meta itemprop="description" content="以铜为镜，可以正衣冠；<br />以史为镜，可以知兴替；<br />以人为镜，可以明得失。">
+      <meta itemprop="image" content="https://p3.music.126.net/Am30CzvY9NTxy1xiz5k3GQ==/7729566744520405.jpg?param=170y170">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yamdestiny">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">日期与时间
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-02-27 21:21:37" itemprop="dateCreated datePublished" datetime="2019-02-27T21:21:37+08:00">2019-02-27</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2024-03-14 18:33:10" itemprop="dateModified" datetime="2024-03-14T18:33:10+08:00">2024-03-14</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/衣带渐宽终不悔，为伊消得人憔悴/" itemprop="url" rel="index"><span itemprop="name">衣带渐宽终不悔，为伊消得人憔悴</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/衣带渐宽终不悔，为伊消得人憔悴/Other/" itemprop="url" rel="index"><span itemprop="name">Other</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/02/27/date-and-time/#comments" itemprop="discussionUrl">
+                
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/02/27/date-and-time/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/02/27/date-and-time/" class="leancloud_visitors" data-flag-title="日期与时间">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>关于日期、时间、时间戳与时区的整理</p>
+<a id="more"></a>
+<h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><p>以常用理解表述：</p>
+<ul>
+<li>时间（Time）：表示时分秒</li>
+<li>日期（Date）：表示年月日</li>
+<li>时间戳（Timestamp）：是指字符串或编码信息用于辨识记录下来的时间日期。</li>
+<li>时区（Time zone）：是对地球上的某个区域使用同一个时间的定义</li>
+</ul>
+<h2 id="时间"><a href="#时间" class="headerlink" title="时间"></a>时间</h2><p>通常使用：24小时制 和 12小时制</p>
+<ul>
+<li>24小时制 (<code>ISO 8601</code>)<ul>
+<li>从 00:00:00 到 24:00:00</li>
+</ul>
+</li>
+<li>12小时制<ul>
+<li>从 12:00:00 a.m. 到 12:00:00 p.m</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>24小时制</th>
+<th>12小时制</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>00:00</td>
+<td>12:00 AM（midnight、子夜）</td>
+</tr>
+<tr>
+<td>01:00</td>
+<td>01:00 AM（上午）</td>
+</tr>
+<tr>
+<td>11:00</td>
+<td>11:00 AM（上午）</td>
+</tr>
+<tr>
+<td>12:00</td>
+<td>12:00 PM（下午）</td>
+</tr>
+<tr>
+<td>13:00</td>
+<td>01:00 PM（下午）</td>
+</tr>
+<tr>
+<td>23:00</td>
+<td>11:00 PM（下午）</td>
+</tr>
+<tr>
+<td>24:00(第二天 00:00)</td>
+<td>12:00 PM（midnight、午夜）</td>
+</tr>
+</tbody>
+</table>
+<h2 id="日期"><a href="#日期" class="headerlink" title="日期"></a>日期</h2><p>通常使用：</p>
+<ul>
+<li>YYYY-MM-DD: 即 2019-02-27 (<code>ISO 8601</code>)</li>
+<li>DD-MM-YYYY: 即 27-02-2019</li>
+</ul>
+<p>不常使用：</p>
+<ul>
+<li>MM-DD-YYYY: 即 02-27-2019</li>
+<li>YYYY-DD-MM: 即 2019-27-02</li>
+</ul>
+<h2 id="时间戳"><a href="#时间戳" class="headerlink" title="时间戳"></a>时间戳</h2><p>指格林威治时间1970年01月01日00时00分00秒（北京时间1970年01月01日08时00分00秒）起至现在的总毫秒或微秒数。</p>
+<p>实际是指从 格林威治时间1970年01月01日00时00分00秒 算 0 毫秒或微秒，直到现在的 毫秒或微秒数。</p>
+<p>通常作为某一刻时间的唯一地标识。遵循 <code>ISO 8601</code> 标准表示。</p>
+<p>通常使用：</p>
+<ul>
+<li>Tue 01-01-2009 6:00</li>
+<li>2005-10-30 T 10:45 UTC</li>
+<li>2007-11-09 T 11:20 UTC</li>
+<li>Sat Jul 23 02:16:57 2005</li>
+<li>1256953732 (Unix time)</li>
+<li>(1969-07-21 T 02:56 UTC) –</li>
+<li>07:38, 11 December 2012 (UTC)</li>
+<li>1985-102 T 10:15 UTC (day 102 of year 1985 = 12 April 1985)</li>
+<li>1985-W15-5 T 10:15 UTC (day 5 of week 15 of year 1985 = 12 April 1985)</li>
+<li>20180203073000 (02/03/2018 7:30:00)</li>
+</ul>
+<h2 id="时区"><a href="#时区" class="headerlink" title="时区"></a>时区</h2><p>在公元1884年的国际会议上制定了全球性的标准时，明定以英国伦敦格林威治这个地方为零度经线的起点（亦称为本初子午线），并以地球由西向东每24小时自转一周360°，订定每隔经度15°，时差1小时。而每15°的经线则称为该时区的中央经线，将全球划分为24个时区，其中包含23个整时区及180°经线左右两侧的2个半时区。就全球的时间来看，东经的时间比西经要早，也就是如果格林威治时间是中午12时，则中央经线15°E的时区为下午1时，中央经线30°E时区的时间为下午2时；反之，中央经线15°W的时区时间为上午11时，中央经线30°W时区的时间为上午10时。以台湾为例，台湾位于东经121°，换算后与格林威治就有8小时的时差。如果两人同时从格林威治的0°各往东、西方前进，当他们在经线180°时，就会相差24小时，所以经线180°被定为国际换日线，由西向东通过此线时日期要减去一日，反之，若由东向西则要增加一日。</p>
+<h2 id="时间标准"><a href="#时间标准" class="headerlink" title="时间标准"></a>时间标准</h2><h3 id="GMT-格林尼治标准时"><a href="#GMT-格林尼治标准时" class="headerlink" title="GMT 格林尼治标准时"></a>GMT 格林尼治标准时</h3><p>格林尼治标准时（英语：Greenwich Mean Time，GMT）是指位于英国伦敦郊区的皇家格林尼治天文台当地的平太阳时，因为本初子午线被定义为通过那里的经线。</p>
+<p>自1924年2月5日开始，格林尼治天文台负责每隔一小时向全世界发放调时信息。</p>
+<p>格林尼治平时的正午是指当平太阳横穿格林尼治子午线时（也就是在格林尼治上空最高点时）的时间。由于地球每天的自转是有些不规则的，而且正在缓慢减速，因此格林尼治平时基于天文观测本身的缺陷，已经被原子钟报时的协调世界时（UTC）所取代。</p>
+<h3 id="UTC-协调世界时"><a href="#UTC-协调世界时" class="headerlink" title="UTC 协调世界时"></a>UTC 协调世界时</h3><p>协调世界时（英语：Coordinated Universal Time，法语：Temps Universel Coordonné，简称UTC）是最主要的世界时间标准，其以原子时秒长为基础，在时刻上尽量接近于格林尼治标准时间。中华民国采用CNS 7648的《资料元及交换格式–资讯交换–日期及时间的表示法》（与ISO 8601类似）称之为世界协调时间。中华人民共和国采用ISO 8601:2000的国家标准GB/T 7408-2005《数据元和交换格式 信息交换 日期和时间表示法》中亦称之为协调世界时。</p>
+<p>协调世界时是世界上调节时钟和时间的主要时间标准，它与0度经线的平太阳时相差不超过1秒，并不遵守夏令时。协调世界时是最接近格林威治标准时间（GMT）的几个替代时间系统之一。对于大多数用途来说，UTC时间被认为能与GMT时间互换，但GMT时间已不再被科学界所确定。</p>
+<p>协调世界时（UTC）正式形成于1960年国际无线电咨询委员会的374号建议中，该建议由多国时间实验室共同提出。人们对该时间系统进行过数次调整，直到1972年引入了闰秒机制，调整工作得以简化。也有很多人提议用一个没有闰秒的时间系统来替换掉协调世界时，但目前尚未就此达成一致。</p>
+<h2 id="地区时间"><a href="#地区时间" class="headerlink" title="地区时间"></a>地区时间</h2><h3 id="PST-太平洋时区"><a href="#PST-太平洋时区" class="headerlink" title="PST 太平洋时区"></a>PST 太平洋时区</h3><p>太平洋时区（英语：Pacific Time Zone）是在美国、加拿大及墨西哥西海岸靠近太平洋地区使用的时区。</p>
+<p>太平洋时区也被称为太平洋时间（英文：Pacific Time，缩写：PT）。而其标准时间（冬季）称为太平洋标准时间（英文：Pacific Standard Time，缩写：PST），UTC-8；夏令时间（夏季）称为太平洋夏令时间（英文：Pacific Daylight Time，缩写：PDT），UTC-7。</p>
+<p>于美国和加拿大，太平洋时区通常被称为太平洋时间。大部分加拿大地区都使用夏令时间。而于墨西哥，UTC−8时区一带被称为西北区，其时间是与美国的太平洋夏令时间同步。</p>
+<p>位于太平洋时区中最大的城市为加州洛杉矶，而最大的地区则为洛杉矶都会区。</p>
+<p>太平洋标准时间比阿拉斯加标准时间快一小时、比夏威夷－阿留申时区快2小时、比山区时区慢一小时、比东部时区慢三小时及比香港和台北慢16小时。</p>
+<h3 id="CST-中国标准时间"><a href="#CST-中国标准时间" class="headerlink" title="CST 中国标准时间"></a>CST 中国标准时间</h3><p>北京时间，又名中国标准时间，是中国大陆的标准时间，比世界协调时快八小时（即UTC+8），与香港、澳门、台北、吉隆坡、新加坡等地的标准时间相同。</p>
+<p>北京时间并不是北京市的地方平太阳时间（东经116.4°），而是东经120°的地方平太阳时间，二者相差约14.5分钟。北京时间由位于中国版图几何中心位置陕西临潼的中国科学院国家授时中心的9台铯原子钟和2台氢原子钟组通过精密比对和计算实现报时，并通过人造卫星与世界各国授时部门进行实时比对。</p>
+<p>中国因幅员辽阔，依地理事实上可划分为东五区、东六区、东七区、东八区、东九区等5个时区。中华民国大陆时期依据国际标准，将全国时区划分为昆仑时区、回藏时区（后改称新藏时区）、陇蜀时区、中原时区、以及长白时区。1949年中华人民共和国成立后，改将中国大陆全境统一划为东八区（UTC+8），同时采用北京时间做为全国唯一的标准时间。</p>
+<ul>
+<li>中原时区（GMT+8），以东经120度经线之时刻为标准；北京、江苏、安徽、浙江、福建、台湾、湖北，湖南，江西、广东、直隶、河南、山东、山西、热河、察哈尔、辽宁、黑龙江之龙江、瑷珲以西及蒙古之东部属之。</li>
+<li>陇蜀时区（GMT+7），以东经105度经线之时刻为标准；陕西、四川、云南、贵州、广西，甘肃东部，宁夏、绥远，蒙古中部、青海及西藏之东部属之：</li>
+<li>回藏时区（GMT+6），以东经90度经线之时刻为标准；蒙古、甘肃、青海及西康等西部，新疆及西藏之东部属之。以上三者皆为整时区。</li>
+<li>昆仑时区（GMT+5:30），以东经82度半经线之时刻为标准；新疆及西藏之西部属之。</li>
+<li>长白时区（GMT+8:30），以东经127度半经线之时刻为标准；吉林及黑龙江之龙江、瑷珲之东属之：以上二者皆半时区也。</li>
+</ul>
+<h3 id="ISO-8601"><a href="#ISO-8601" class="headerlink" title="ISO 8601"></a>ISO 8601</h3><p>国际标准ISO 8601，是国际标准化组织的日期和时间的表示方法，全称为《数据存储和交换形式·信息交换·日期和时间的表示方法》。目前是2004年12月1日发行的第三版“ISO8601:2004”以替代1998年的第一版“ISO8601:1988”与2000年的第二版“ISO8601:2000”。</p>
+<p>ISO 表示法：</p>
+<ul>
+<li>日期: 2019-02-27</li>
+<li>UTC日期与时刻: <ul>
+<li>2019-02-27T08:36:54+00:00</li>
+<li>2019-02-27T08:36:54Z</li>
+</ul>
+</li>
+<li>周数:    2019-W09</li>
+<li>当前日期与周数: 2019-W09-1</li>
+<li>当前初始累计日数:    2019-058</li>
+</ul>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ul>
+<li><a href="https://en.wikipedia.org/wiki/12-hour_clock" target="_blank" rel="noopener">12小时制</a></li>
+<li><a href="https://en.wikipedia.org/wiki/24-hour_clock" target="_blank" rel="noopener">24小时制</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Calendar_date" target="_blank" rel="noopener">Calendar date</a></li>
+<li><a href="https://en.wikipedia.org/wiki/ISO_8601" target="_blank" rel="noopener">ISO 8601</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Timestamp" target="_blank" rel="noopener">时间戳</a></li>
+<li><a href="http://www.51testing.com/html/74/248074-209865.html" target="_blank" rel="noopener">24时区，GMT，UTC，DST，CST时间详解</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Greenwich_Mean_Time" target="_blank" rel="noopener">格林尼治标准时</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Coordinated_Universal_Time" target="_blank" rel="noopener">协调世界时</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Pacific_Time_Zone" target="_blank" rel="noopener">太平洋时区</a></li>
+<li><a href="http://www.timeofdate.com/articles/posts/standard-time.html" target="_blank" rel="noopener">什么是标准时间？</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%9C%8B%E6%99%82%E5%8D%80" target="_blank" rel="noopener">中国时区</a></li>
+</ul>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>YamDestiny</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://yamdestiny.xyz/2019/02/27/date-and-time/" title="日期与时间">https://yamdestiny.xyz/2019/02/27/date-and-time/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Time/" rel="tag"># Time</a>
+          
+            <a href="/tags/Date/" rel="tag"># Date</a>
+          
+            <a href="/tags/Timestamp/" rel="tag"># Timestamp</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/12/09/java-web-startup-sequence/" rel="next" title="Java Web 启动加载顺序简述">
+                <i class="fa fa-chevron-left"></i> Java Web 启动加载顺序简述
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/03/08/how-to-use-statsvn/" rel="prev" title="如何使用 StatSVN">
+                如何使用 StatSVN <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="https://p3.music.126.net/Am30CzvY9NTxy1xiz5k3GQ==/7729566744520405.jpg?param=170y170" alt="YamDestiny">
+            
+              <p class="site-author-name" itemprop="name">YamDestiny</p>
+              <p class="site-description motion-element" itemprop="description">以铜为镜，可以正衣冠；<br>以史为镜，可以知兴替；<br>以人为镜，可以明得失。</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">51</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">17</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">49</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/YamDestiny" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://steamcommunity.com/id/maple_wqs" target="_blank" title="Steam"><i class="fa fa-fw fa-steam"></i>Steam</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本概念"><span class="nav-number">1.</span> <span class="nav-text">基本概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#时间"><span class="nav-number">2.</span> <span class="nav-text">时间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#日期"><span class="nav-number">3.</span> <span class="nav-text">日期</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#时间戳"><span class="nav-number">4.</span> <span class="nav-text">时间戳</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#时区"><span class="nav-number">5.</span> <span class="nav-text">时区</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#时间标准"><span class="nav-number">6.</span> <span class="nav-text">时间标准</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#GMT-格林尼治标准时"><span class="nav-number">6.1.</span> <span class="nav-text">GMT 格林尼治标准时</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UTC-协调世界时"><span class="nav-number">6.2.</span> <span class="nav-text">UTC 协调世界时</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#地区时间"><span class="nav-number">7.</span> <span class="nav-text">地区时间</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#PST-太平洋时区"><span class="nav-number">7.1.</span> <span class="nav-text">PST 太平洋时区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CST-中国标准时间"><span class="nav-number">7.2.</span> <span class="nav-text">CST 中国标准时间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ISO-8601"><span class="nav-number">7.3.</span> <span class="nav-text">ISO 8601</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文献"><span class="nav-number">8.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2024</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">YamDestiny</span>
+
+  
+
+  
+</div>
+
+
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.9.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Muse</a> v6.3.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.3.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.3.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.3.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.3.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.3.0"></script>
+
+
+
+  
+
+  
+    <script id="dsq-count-scr" src="https://yamdestiny.disqus.com/count.js" async></script>
+  
+
+  
+    <script type="text/javascript">
+      var disqus_config = function () {
+        this.page.url = 'https://yamdestiny.xyz/2019/02/27/date-and-time/';
+        this.page.identifier = '2019/02/27/date-and-time/';
+        this.page.title = '日期与时间';
+        };
+      function loadComments () {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://yamdestiny.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      }
+      
+        $(function () {
+          var offsetTop = $('#comments').offset().top - $(window).height();
+          if (offsetTop <= 0) {
+            // load directly when there's no a scrollbar
+            loadComments();
+          } else {
+            $(window).on('scroll.disqus_scroll', function () {
+              var scrollTop = document.documentElement.scrollTop;
+              if (scrollTop >= offsetTop) {
+                $(window).off('.disqus_scroll');
+                loadComments();
+              }
+            });
+          }
+        });
+      
+    </script>
+  
+
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("pc5KAuPRXg1dU4bG8nC957no-gzGzoHsz", "MSoOlaJ0XYd1YN1SbFBCENg2");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            
+            counter.save(null, {
+              success: function(counter) {
+                
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(counter.get('time'));
+                
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            
+              var newcounter = new Counter();
+              /* Set ACL */
+              var acl = new AV.ACL();
+              acl.setPublicReadAccess(true);
+              acl.setPublicWriteAccess(true);
+              newcounter.setACL(acl);
+              /* End Set ACL */
+              newcounter.set("title", title);
+              newcounter.set("url", url);
+              newcounter.set("time", 1);
+              newcounter.save(null, {
+                success: function(newcounter) {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+                },
+                error: function(newcounter, error) {
+                  console.log('Failed to create');
+                }
+              });
+            
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      },
+      TeX: {equationNumbers: { autoNumber: "AMS" }}
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+  
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

@@ -1,0 +1,1337 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=6.3.0" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.3.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico?v=6.3.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico?v=6.3.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.3.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '6.3.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="Linux 是一种自由和开源的类Unix操作系统。 严格意义来说 Linux 是一种操作系统的内核（Kernel）。因操作系统中包含了许多图形用户界面（GUI）和其他实用工具。如今 Linux 常用来指基于 Linux 的完整操作系统，内核则改以 Linux内核 称之。 说到 Linux 的起源，就不得不说 Unix 。正如其定义：类Unix操作系统。 而说到 Unix 就也不得不说 C语言。">
+<meta name="keywords" content="Linux,OS,Unix">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The Origin of Linux">
+<meta property="og:url" content="https://yamdestiny.xyz/2017/12/24/The-Origin-of-Linux/index.html">
+<meta property="og:site_name" content="Yamdestiny">
+<meta property="og:description" content="Linux 是一种自由和开源的类Unix操作系统。 严格意义来说 Linux 是一种操作系统的内核（Kernel）。因操作系统中包含了许多图形用户界面（GUI）和其他实用工具。如今 Linux 常用来指基于 Linux 的完整操作系统，内核则改以 Linux内核 称之。 说到 Linux 的起源，就不得不说 Unix 。正如其定义：类Unix操作系统。 而说到 Unix 就也不得不说 C语言。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2024-03-14T15:07:58.399Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="The Origin of Linux">
+<meta name="twitter:description" content="Linux 是一种自由和开源的类Unix操作系统。 严格意义来说 Linux 是一种操作系统的内核（Kernel）。因操作系统中包含了许多图形用户界面（GUI）和其他实用工具。如今 Linux 常用来指基于 Linux 的完整操作系统，内核则改以 Linux内核 称之。 说到 Linux 的起源，就不得不说 Unix 。正如其定义：类Unix操作系统。 而说到 Unix 就也不得不说 C语言。">
+
+
+
+
+
+
+  <link rel="canonical" href="https://yamdestiny.xyz/2017/12/24/The-Origin-of-Linux/">
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>The Origin of Linux | Yamdestiny</title>
+  
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-92396016-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-92396016-1');
+</script>
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?4eacbd1e85d8eebe356b663a83063d78";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Yamdestiny</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-series">
+    <a href="/series/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>系列</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-resource">
+    <a href="/resource/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-file"></i> <br>资源</a>
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+  
+  
+  
+    
+      
+    
+    <a href="https://github.com/YamDestiny" class="github-corner" target="_blank" title="Follow me on GitHub" aria-label="Follow me on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#222; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg>
+    
+      </a>
+    
+
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yamdestiny.xyz/2017/12/24/The-Origin-of-Linux/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="YamDestiny">
+      <meta itemprop="description" content="以铜为镜，可以正衣冠；<br />以史为镜，可以知兴替；<br />以人为镜，可以明得失。">
+      <meta itemprop="image" content="https://p3.music.126.net/Am30CzvY9NTxy1xiz5k3GQ==/7729566744520405.jpg?param=170y170">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yamdestiny">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">The Origin of Linux
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2017-12-24 22:48:28" itemprop="dateCreated datePublished" datetime="2017-12-24T22:48:28+08:00">2017-12-24</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2024-03-14 23:07:58" itemprop="dateModified" datetime="2024-03-14T23:07:58+08:00">2024-03-14</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/衣带渐宽终不悔，为伊消得人憔悴/" itemprop="url" rel="index"><span itemprop="name">衣带渐宽终不悔，为伊消得人憔悴</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/衣带渐宽终不悔，为伊消得人憔悴/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/12/24/The-Origin-of-Linux/#comments" itemprop="discussionUrl">
+                
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/12/24/The-Origin-of-Linux/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/12/24/The-Origin-of-Linux/" class="leancloud_visitors" data-flag-title="The Origin of Linux">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><strong>Linux</strong> 是一种自由和开源的类Unix操作系统。</p>
+<p>严格意义来说 <strong>Linux</strong> 是一种操作系统的内核（Kernel）。因操作系统中包含了许多图形用户界面（GUI）和其他实用工具。如今 Linux 常用来指基于 Linux 的完整操作系统，内核则改以 Linux内核 称之。</p>
+<p>说到 Linux 的起源，就不得不说 Unix 。正如其定义：类Unix操作系统。</p>
+<p>而说到 Unix 就也不得不说 C语言。</p>
+<a id="more"></a>
+<h2 id="Unix的起源"><a href="#Unix的起源" class="headerlink" title="Unix的起源"></a>Unix的起源</h2><p>上世纪六十年代时，大部份计算机都是采用批处理的方式（也就是，当作业积累一定数量的时候，计算机才会进行处理）。</p>
+<p>Unix的前身为1964年开始的<strong>Multics</strong>。贝尔实验室于1965年时，加入一项由通用电气（General Electric）和麻省理工学院（MIT）合作的被设计运行在GE-645大型主机上的多用途、分时及多用户的操作系统的计划。由于目标庞大，开发进度缓慢，且性能较低。贝尔实验室于1969年退出了该项计划。</p>
+<p>当时为了开发Multics而招募的<strong>肯·汤普逊</strong>（Ken Thompson），加入不久，计划就中止了，但是GE-645还保留在贝尔实验室，于是他继续在该机器上开发软件。当时他编写了一个太空旅行游戏，实际运行后发现游戏速度很慢且耗费昂贵（每次运行会花费75美元），随后GE-645被搬走。Ken在实验室中找到几台没人用的PDP-7，在<strong>丹尼斯·里奇</strong>（Dennis  Ritchie）的帮助下，Ken用PDP-7的汇编语言重写了这个游戏。（当时PDP-7没有操作系统，为了运行游戏，顺便开发了一个简易的操作系统，也可以当成是Unix的雏形）</p>
+<p>在游戏开发完成后，Ken提议在PDP-7上开发操作系统的计划，Multics当时的项目组成员都加入其中。在团队合作下，最终做出了一个分时多任务系统，称为第一版的Unix。</p>
+<p>因为PDP-7的性能不佳，Ken和Dennis将第一版Unix移植到了PDP-11/20的机器上，开发了第二版的Unix。Ken和Dennis嫌用汇编语言做移植太麻烦，他们整合BCPL（Basic Combined Programming Language）形成了B语言（取BCPL的第一个字母）。</p>
+<p>当时第一版和第二版的Unix，一些应用都是通过B语言和汇编语言编写的。麻烦，编写效率低。于是Ken和Dennis对B语言进行改造，于1971年发明了C语言（取BCPL的第二个字母）。1973年用C语言重写了Unix，形成了第三版的Unix。</p>
+<p>Unix 的第一篇文章<em>The UNIX Time Sharing System</em>由 Ken 和 Dennis 于1974年7月的 the Communications of the ACM 发表。 Unix自此面世，Unix被政府机关，研究机构，企业和大学注意到，并逐渐流行开来。</p>
+<h2 id="Unix的发展"><a href="#Unix的发展" class="headerlink" title="Unix的发展"></a>Unix的发展</h2><p>自1974年Unix面世后，到1979年相继发布到第7个版本。第7个版本被称为是“最后一个真正的Unix”，之后虽然发布了8、9、10版本，但是只授权给了少部分的大学使用。</p>
+<p>期间，各教育机构或公司对Unix进行了不同的更改，开创了多个分支。其中比较著名的就有BSD和AT&amp;T的UNIX System。</p>
+<p>1978年，加州大学伯克利分校（University of California, Berkeley）推出了基于Unix版本6，加上一些改进和新功能而成的 Unix。这就是著名的“1 BSD（1st Berkeley Software Distribution）”</p>
+<p>1982年，AT&amp;T基于版本7开发了UNIX System Ⅲ的第一个版本，这是一个商业版本仅供出售。为了解决混乱的UNIX版本情况，AT&amp;T综合了其他大学和公司开发的各种UNIX，开发了UNIX System V Release 1。这个新的UNIX商业发布版本不再包含源代码，所以加州大学伯克利分校继续开发BSD UNIX，作为UNIX System III和V的替代选择。</p>
+<p>这3个分支发布过后，其他一些公司也开始为其自己的小型机或工作站提供商业版本的UNIX系统，有些选择System V作为基础版本，有些则选择了BSD。BSD的一名主要开发者，Bill Joy，在BSD基础上开发了SunOS，并最终创办了Sun Microsystems。</p>
+<blockquote>
+<p>1969～2005的Unix发展史：<a href="https://www.levenez.com/unix/" target="_blank" rel="noopener">https://www.levenez.com/unix/</a><br>现在的文献中提到Unix基本上是说，由Ken Thompson和Dennis Ritchie共同开发的。<br>通过历史发现，Unix主要是由Ken Thompson写下的。但在学术界，Dennis Ritchie的名字往往被排在了Ken Thompson前面的。这是因为，Dennis Ritchie不但发明了C语言，而且当时他设计Unix操作系统的设计思想，影响了整个世界，直到今天。<br>当时，他们开发 UNIX，没有正式立项，是 Ken Thompson 和 Dennis Ritchie 等少数几个人偷偷干的，如一切从头从新设计，几乎是不可能的，所以Unix借鉴了Multics的经验，并进行了创新。</p>
+</blockquote>
+<blockquote>
+<p>下面是Unix的特点：</p>
+<ul>
+<li>Everything（including hardware）is a file （所有的事物（甚至硬件本身）都是一个文件。）</li>
+<li>Configuration data stored in text（ 以文本形式储存配置数据。）</li>
+<li>Small, single-purpose program （程序尽量朝向小而单一的目标设计。）</li>
+<li>Avoid captive user interfaces （尽量避免令人困惑的用户接口。）</li>
+<li>Ability to chain program together to perform complex tasks （将几个程序连结起来，处理大而复杂的工作。）</li>
+</ul>
+</blockquote>
+<h2 id="Linux的起源"><a href="#Linux的起源" class="headerlink" title="Linux的起源"></a>Linux的起源</h2><h3 id="Unix的发展停滞"><a href="#Unix的发展停滞" class="headerlink" title="Unix的发展停滞"></a>Unix的发展停滞</h3><p>1982年，AT&amp;T意识到了Unix的商业价值，为了私有化Unix，1986年IEEE指定了一个委员会制定了一个一个开放作业系统的标准，称为 POSIX （Portable Operating Systems Interface）。AT&amp;T的Unix取得了这个标准制订战争的胜利，还取得了Unix这个注册商标。</p>
+<p>1991年，一群BSD开发者（Donn Seeley、Mike Karels、Bill Jolitz 和 Trent Hein）离开了加州大学，创办了Berkeley Software Design， Inc （BSDI）。BSDI是第一家在便宜常见的Intel平台上提供全功能商业BSD UNIX的厂商。后来Bill Jolitz 离开了BSDI，开始了386BSD的工作。386BSD被认为是FreeBSD、OpenBSD 和 NetBSD、DragonFlyBSD的先辈。</p>
+<p>1992年，USL（AT&amp;T的附属公司UNIX Systems Laboratories）正式对BSDI提起诉讼，说BSD剽窃他的源码。最终了结了好评如潮的BSD系统。</p>
+<p>这场官司一直打到AT&amp;T将自己的Unix系统实验室卖掉，新接手的Novell公司采取了一种比较开明的做法，允许BSDI自由发布自己的BSD，但是前提是必须将来自于AT&amp;T的代码完全删除。这桩诉讼最终在1994年1月了结，于是BSD一系列的开发也被延迟了两年。</p>
+<h3 id="Minix"><a href="#Minix" class="headerlink" title="Minix"></a>Minix</h3><p>Minix，是一个迷你版本的类Unix操作系统，由塔能鲍姆教授为了教学之用而创作，采用微核心设计，以C语言写成，与Version 7 Unix兼容，全部的代码共约12,000行，并置于他的著作《操作系统：设计与实现》（Operating Systems: Design and Implementation，ISBN 0-13-637331-3）的附录里作为示例。</p>
+<p>因为AT&amp;T的政策改变，在Unix版本7推出之后，发布新的使用许可协议，将UNIX源代码私有化，在大学中不再能使用UNIX源代码。塔能鲍姆教授为了能在课堂上教授学生操作系统运作的实务细节，决定在不使用任何AT&amp;T的源代码前提下，自行开发与UNIX兼容的操作系统，以避免版权上的争议。他以小型UNIX（mini-UNIX）之意，将它称为MINIX。</p>
+<p>第一版于1987年发布。</p>
+<h3 id="GNU-Project"><a href="#GNU-Project" class="headerlink" title="GNU Project"></a>GNU Project</h3><p>1983年，理查德·马修·斯托曼创立GNU计划。这个计划有一个目标，是为了发展一个完全自由的类Unix操作系统。在1985年，理查德·马修·斯托曼发起自由软件基金会，并且在1989年撰写GPL协议（GNU General Public License，GNU通用公共许可证）。1990年代早期，GNU开始大量的产生或收集各种系统所必备的组件，像是库、编译器、调试工具、文本编辑器、网页服务器、用户界面。但是由于底层环境——内核，设计异常复杂，发展进度缓慢，一度陷入停滞。</p>
+<h3 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h3><p>1991年，林纳斯·托瓦兹（Linus Benedict Torvalds）在赫尔辛基大学（University of Helsinki）上学时，不满于当时使用的386计算机上的MS-DOS（MicroSoft Disk Operating System）。于是获取了Minix来使用。又对Minix在当时只允许教育使用不满，便开始写他自己的操作系统。</p>
+<p>1991年9月，发布Linux 0.01版。大学FTP server管理员Ari Lemmke发布在Internet上，最初Torvalds称这个内核的名称为”Freax”，意思是自由（”free”）和奇异（”freak”）的结合字，并且附上”X”这个常用的字母，以配合所谓的类Unix的系统。但是FTP服务器管理员嫌原来的命名“Freax”的名称不好听，把内核的称呼改成“Linux”。当时仅有雏形，且必须在有Minix的机器上编译以后才能玩。</p>
+<p>1991年10月，发布Linux 0.0.2版本，这个版本中已经可以运行 bash 和 gcc。</p>
+<p>在当时由于BSD的发展陷入停滞，Linux的开放源代码在网络中传播，引起了黑客们的注意。一批高水平的黑客加入编写，使Linux发展迅猛，几乎一两个礼拜就有新特性的版本或修正版本的发布。</p>
+<p>1993年底，1994年初，Linux 1.0发布。Linux 1.0已经是一个功能完备的操作系统，而且内核写得紧凑高效，可以充分发挥硬件的性能，在4M内存的80386机器上也表现得非常好。</p>
+<blockquote>
+<p>Linux的标志和吉祥物是一只名字叫做Tux的企鹅，标志的由来是因为Linus在澳洲时曾被一只动物园里的企鹅咬了一口，便选择企鹅作为Linux的标志。更容易被接受的说法是：企鹅代表南极，而南极又是全世界所共有的一块陆地。这也就代表Linux是所有人的Linux。</p>
+</blockquote>
+<h2 id="Linux的发展"><a href="#Linux的发展" class="headerlink" title="Linux的发展"></a>Linux的发展</h2><p>到1991年Linux发布时，GNU已经具有了除系统内核外的各种必备软件。后来Linus及其他开发人员使用GNU的软件来代替Minix的软件，将GNU的各种组件运行于Linux之上，并将Linux的开源协议修改为GNU的GPL，以使其能够在商业上使用。</p>
+<p>1994年3月，Linux1.0版正式发布，Marc Ewing成立了 Red Hat 软件公司，成为最著名的 Linux 分销商之一。</p>
+<p>到1995年，Linux已经发展成为能够在性能和特性上均堪媲美专有Unix的操作系统，也由于开源的Web服务器Apache的稳定和高效，Linux + Apache的搭配也成了全球服务器的首选。</p>
+<h2 id="Linux的影响"><a href="#Linux的影响" class="headerlink" title="Linux的影响"></a>Linux的影响</h2><p>自从Unix的出现，黑客文化随之而来。以对Unix的自由和跨平台移植为追求和乐趣。Unix在AT&amp;T准备私有化和商业化，并在Unix的法律纠纷之时。不仅是Unix受到了打击，整个黑客文化也受到了打击。GNU的发起者Richard Stallman主张的是完全自由化，反商业化。Linus不认同Richard的观点。Linux的出现与发展，表现出了对自由软件的追求，和商业软件的认同。自此Linus成为了黑客文化新一代的领袖，也造就了今天的Linux火红的局面。更促使了网景公司（Netscape Communications）公布了其Mozilla浏览器的源码。</p>
+<blockquote>
+<p>黑客（Hacker）最早是指非科班出身，但又对计算机（计算机科学、编程、设计）具有高度深入理解的人。后泛指对计算机（计算机科学、编程、设计）具有高度深入理解的人。</p>
+</blockquote>
+<h2 id="Unix的影响"><a href="#Unix的影响" class="headerlink" title="Unix的影响"></a>Unix的影响</h2><p>在那充满激情的 Unix 的岁月里，大伙为了科研目的或个人兴趣在Unix上进行各种开发，并且不计较金钱利益，将这些源码公开，互相共享。在那里，开发和自由成为主题，正因为如此，当今的世界才如此丰富多采。在40年Unix文化和技术积淀的里面，蕴涵着比较纯正的计算机文化和思想。</p>
+<p>纵观整个 Unix 的历史过程中，许许多多的程序员、工程师前辈们在Unix中所摸爬滚打，他们的辛勤地、他们呕心沥血地跟随Unix，努力建立一个繁荣的计算机世界的文明。Unix不是一个简简单单的操作系统。有人说，Unix是程序员设计给程序员的，一点没错。Unix的近40年历史造就了它的博大精深，它给程序员们带来的绝不仅仅只是技术上的知识。它的失误，它的无奈，它的精神，它的荣耀，它从技术和思想上都启迪着我们。对于程序员来说，学习Unix就等同于向前辈程序学习。无论你是什么样的程序员，你都应该了解Unix，这是开发人员的根，前面的开发者造就了它，而它又在引领后面的开发人员，它是前辈程序员们交给我们的一份礼物，一个接力棒，它是开发人员赖以生存的土壤，是上一辈程序员留给我们这一代程序员开启未来的钥匙。Unix就像一个程序员教父一样，理当受到我们的尊敬和崇拜。</p>
+<h2 id="BSD的分支"><a href="#BSD的分支" class="headerlink" title="BSD的分支"></a>BSD的分支</h2><p>三个“主流” BSD 操作系统：</p>
+<ol>
+<li><p><a href="http://www.freebsd.org/" target="_blank" rel="noopener">FreeBSD</a>：FreeBSD 是最受欢迎的 BSD，针对高性能和易用性。它支持英特尔和 AMD 的32位和64位处理器。</p>
+</li>
+<li><p><a href="http://www.netbsd.org/" target="_blank" rel="noopener">NetBSD</a>：NetBSD 被设计运行在几乎任何架构上，支持更多的体系结构。在他们的主页上的格言是”理所当然，我们运行在 NetBSD 上”。</p>
+</li>
+<li><p><a href="http://www.openbsd.org/" target="_blank" rel="noopener">OpenBSD</a>：OpenBSD 为最大化的安全性设计的 —— 这不仅仅它宣称的功能，在实践中也确实如此。它是为银行和其他重要机构的关键系统设计的。</p>
+</li>
+</ol>
+<p>重要BSD分支</p>
+<ol>
+<li><p><a href="http://www.dragonflybsd.org/" target="_blank" rel="noopener">DragonFly BSD</a>：DragonFly BSD 的设计目标是提供一个运行在多线程环境中的操作系统 —— 例如，计算机集群。</p>
+</li>
+<li><p><a href="http://opensource.apple.com/" target="_blank" rel="noopener">Darwin / Mac OS X</a>：Mac OS X 实际上基于 Darwin 操作系统，而 Darwin 系统基于 BSD。它与其他的 BSD 有点不同，虽然底层内核和其他的软件是开源代码(BSD 代码)，但操作系统的大部分是闭源的 Mac OS 代码)。苹果在 BSD 基础上开发了 Mac OS X 和 iOS，这样苹果就不必写操作系统底层，就像 <a href="http://www.howtogeek.com/189036/android-is-based-on-linux-but-what-does-that-mean/" target="_blank" rel="noopener">谷歌在 Linux 基础上开发 android 系统</a>一样。</p>
+</li>
+</ol>
+<h2 id="Linux的分支（发行版）"><a href="#Linux的分支（发行版）" class="headerlink" title="Linux的分支（发行版）"></a>Linux的分支（发行版）</h2><ol>
+<li><p>Debian系，大多主桌面使用，安装包格式<code>.deb</code>，安装命令<code>dpkg</code>，包管理工具<code>apt-get</code></p>
+<ul>
+<li>Debian GNU/Linux</li>
+<li>Deepin，深度，武汉深之度科技有限公司开发</li>
+<li>Ubuntu<ul>
+<li>Linux Mint</li>
+<li>Elementary OS</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Red Hat系，大多主服务器使用，安装包格式<code>.rpm</code>，安装命令<code>rpm</code>，包管理工具<code>yum</code></p>
+<ul>
+<li>Red Hat Enterprise Linux（RHEL），Red Hat商业维护</li>
+<li>CentOS（不包含Red Hat商业应用的Red Hat），社区维护</li>
+<li>Fedora，Red Hat及社区维护</li>
+<li>SUSE/open SUSE，德国产</li>
+<li>Oracle Linux，针对Oracle系应用优化</li>
+</ul>
+</li>
+<li><p>Slackware系，UNIX风格</p>
+<ul>
+<li>Slackware</li>
+</ul>
+</li>
+<li><p>其它系</p>
+<ul>
+<li>Arch Linux，极简风，只包含最基本的系统软件。安装已经打包好的软件。</li>
+<li>Gentoo，极简风，只包含最基本的系统软件。下载源码编译安装。</li>
+</ul>
+</li>
+</ol>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ul>
+<li><a href="http://bbs.feng.com/read-htm-tid-6209622.html" target="_blank" rel="noopener">花了一天时间，终于把unix、linux、ios、android区别大致联系搞清楚，好像很复杂的样子…</a></li>
+<li><a href="https://www.iplaysoft.com/p/brief-history-of-linux" target="_blank" rel="noopener">你不知道的过去 - Linux 系统发展史小览 (与Unix区别科普文)</a></li>
+<li><a href="https://linux.cn/article-3186-1.html" target="_blank" rel="noopener">Linux 与 BSD 有什么不同?</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/C%E8%AF%AD%E8%A8%80" target="_blank" rel="noopener">C语言 - Wikipedia</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/UNIX" target="_blank" rel="noopener">UNIX - Wikipedia</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/Linux" target="_blank" rel="noopener">Linux - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Unix-like" target="_blank" rel="noopener">Unix-like - Wikipedia</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/GNU%E8%A8%88%E5%8A%83" target="_blank" rel="noopener">GNU计划 - Wikipedia</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/%E6%9E%97%E7%BA%B3%E6%96%AF%C2%B7%E6%89%98%E7%93%A6%E5%85%B9" target="_blank" rel="noopener">Linus Torvalds - Wikipedia</a></li>
+<li><a href="https://i.linuxtoy.org/docs/guide/index.html" target="_blank" rel="noopener">开源世界旅行手册</a></li>
+<li><a href="http://linux.vbird.org/" target="_blank" rel="noopener">鳥哥的 Linux 私房菜</a></li>
+</ul>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>YamDestiny</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://yamdestiny.xyz/2017/12/24/The-Origin-of-Linux/" title="The Origin of Linux">https://yamdestiny.xyz/2017/12/24/The-Origin-of-Linux/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Linux/" rel="tag"># Linux</a>
+          
+            <a href="/tags/OS/" rel="tag"># OS</a>
+          
+            <a href="/tags/Unix/" rel="tag"># Unix</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/11/29/Oracle-Database-ORA-01033&ORA-01113&ORA-01110/" rel="next" title="Oracle数据库错误ORA-01033、ORA-01113、ORA-01110">
+                <i class="fa fa-chevron-left"></i> Oracle数据库错误ORA-01033、ORA-01113、ORA-01110
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/02/07/java-lang-Throwable/" rel="prev" title="java.lang.Throwable">
+                java.lang.Throwable <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="https://p3.music.126.net/Am30CzvY9NTxy1xiz5k3GQ==/7729566744520405.jpg?param=170y170" alt="YamDestiny">
+            
+              <p class="site-author-name" itemprop="name">YamDestiny</p>
+              <p class="site-description motion-element" itemprop="description">以铜为镜，可以正衣冠；<br>以史为镜，可以知兴替；<br>以人为镜，可以明得失。</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">51</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">17</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">49</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/YamDestiny" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://steamcommunity.com/id/maple_wqs" target="_blank" title="Steam"><i class="fa fa-fw fa-steam"></i>Steam</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Unix的起源"><span class="nav-number">1.</span> <span class="nav-text">Unix的起源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Unix的发展"><span class="nav-number">2.</span> <span class="nav-text">Unix的发展</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux的起源"><span class="nav-number">3.</span> <span class="nav-text">Linux的起源</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Unix的发展停滞"><span class="nav-number">3.1.</span> <span class="nav-text">Unix的发展停滞</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Minix"><span class="nav-number">3.2.</span> <span class="nav-text">Minix</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GNU-Project"><span class="nav-number">3.3.</span> <span class="nav-text">GNU Project</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Linux"><span class="nav-number">3.4.</span> <span class="nav-text">Linux</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux的发展"><span class="nav-number">4.</span> <span class="nav-text">Linux的发展</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux的影响"><span class="nav-number">5.</span> <span class="nav-text">Linux的影响</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Unix的影响"><span class="nav-number">6.</span> <span class="nav-text">Unix的影响</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BSD的分支"><span class="nav-number">7.</span> <span class="nav-text">BSD的分支</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux的分支（发行版）"><span class="nav-number">8.</span> <span class="nav-text">Linux的分支（发行版）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文献"><span class="nav-number">9.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2024</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">YamDestiny</span>
+
+  
+
+  
+</div>
+
+
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.9.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Muse</a> v6.3.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.3.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.3.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.3.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.3.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.3.0"></script>
+
+
+
+  
+
+  
+    <script id="dsq-count-scr" src="https://yamdestiny.disqus.com/count.js" async></script>
+  
+
+  
+    <script type="text/javascript">
+      var disqus_config = function () {
+        this.page.url = 'https://yamdestiny.xyz/2017/12/24/The-Origin-of-Linux/';
+        this.page.identifier = '2017/12/24/The-Origin-of-Linux/';
+        this.page.title = 'The Origin of Linux';
+        };
+      function loadComments () {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://yamdestiny.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      }
+      
+        $(function () {
+          var offsetTop = $('#comments').offset().top - $(window).height();
+          if (offsetTop <= 0) {
+            // load directly when there's no a scrollbar
+            loadComments();
+          } else {
+            $(window).on('scroll.disqus_scroll', function () {
+              var scrollTop = document.documentElement.scrollTop;
+              if (scrollTop >= offsetTop) {
+                $(window).off('.disqus_scroll');
+                loadComments();
+              }
+            });
+          }
+        });
+      
+    </script>
+  
+
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("pc5KAuPRXg1dU4bG8nC957no-gzGzoHsz", "MSoOlaJ0XYd1YN1SbFBCENg2");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            
+            counter.save(null, {
+              success: function(counter) {
+                
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(counter.get('time'));
+                
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            
+              var newcounter = new Counter();
+              /* Set ACL */
+              var acl = new AV.ACL();
+              acl.setPublicReadAccess(true);
+              acl.setPublicWriteAccess(true);
+              newcounter.setACL(acl);
+              /* End Set ACL */
+              newcounter.set("title", title);
+              newcounter.set("url", url);
+              newcounter.set("time", 1);
+              newcounter.save(null, {
+                success: function(newcounter) {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+                },
+                error: function(newcounter, error) {
+                  console.log('Failed to create');
+                }
+              });
+            
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      },
+      TeX: {equationNumbers: { autoNumber: "AMS" }}
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+  
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
