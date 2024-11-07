@@ -1,478 +1,270 @@
 <!DOCTYPE html>
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-<html class="theme-next muse use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.9.0">
+<html lang="zh-CN">
+<head>
   <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
 
 
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha256-5eIC48iZUHmSlSUz9XtjRyK2mzQkHScZY1WdMaoz74E=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
+<script class="next-config" data-name="main" type="application/json">{"hostname":"yamdestiny.xyz","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.21.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqus","storage":true,"lazyload":true,"nav":null,"activeClass":"disqus"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform">
-<meta http-equiv="Cache-Control" content="no-siteapp">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
-
-<link href="/css/main.css?v=6.3.0" rel="stylesheet" type="text/css">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.3.0">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico?v=6.3.0">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico?v=6.3.0">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=6.3.0" color="#222">
-
-
-
-
-
-
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Muse',
-    version: '6.3.0',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: false,
-    fastclick: false,
-    lazyload: false,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
-
-
-  
-
-
-
-
-  <meta name="description" content="关于日期、时间、时间戳与时区的整理">
-<meta name="keywords" content="Time,Date,Timestamp">
+    <meta name="description" content="关于日期、时间、时间戳与时区的整理">
 <meta property="og:type" content="article">
 <meta property="og:title" content="日期与时间">
 <meta property="og:url" content="https://yamdestiny.xyz/2019/02/27/date-and-time/index.html">
 <meta property="og:site_name" content="Maple Story">
 <meta property="og:description" content="关于日期、时间、时间戳与时区的整理">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2024-03-14T10:33:10.247Z">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-02-27T13:21:37.000Z">
+<meta property="article:modified_time" content="2024-11-07T05:04:52.422Z">
+<meta property="article:author" content="Maple">
+<meta property="article:tag" content="Time">
+<meta property="article:tag" content="Date">
+<meta property="article:tag" content="Timestamp">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="日期与时间">
-<meta name="twitter:description" content="关于日期、时间、时间戳与时区的整理">
+
+
+<link rel="canonical" href="https://yamdestiny.xyz/2019/02/27/date-and-time/">
 
 
 
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://yamdestiny.xyz/2019/02/27/date-and-time/","path":"2019/02/27/date-and-time/","title":"日期与时间"}</script>
 
-
-
-  <link rel="canonical" href="https://yamdestiny.xyz/2019/02/27/date-and-time/">
-
-
-
-<script type="text/javascript" id="page.configurations">
-  CONFIG.page = {
-    sidebar: "",
-  };
-</script>
-
-  <title>日期与时间 | Maple Story</title>
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>日期与时间 | Maple Story</title>
   
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-92396016-1"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-92396016-1","only_pageview":false,"measure_protocol_api_secret":null}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+  <script src="/js/third-party/analytics/baidu-analytics.js"></script>
+  <script async src="https://hm.baidu.com/hm.js?4eacbd1e85d8eebe356b663a83063d78"></script>
 
 
 
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-92396016-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-92396016-1');
-</script>
-
-
-
-  <script type="text/javascript">
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?4eacbd1e85d8eebe356b663a83063d78";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
 
 
 
 
   <noscript>
-  <style type="text/css">
-    .use-motion .motion-element,
-    .use-motion .brand,
-    .use-motion .menu-item,
-    .sidebar-inner,
-    .use-motion .post-block,
-    .use-motion .pagination,
-    .use-motion .comments,
-    .use-motion .post-header,
-    .use-motion .post-body,
-    .use-motion .collection-title { opacity: initial; }
-
-    .use-motion .logo,
-    .use-motion .site-title,
-    .use-motion .site-subtitle {
-      opacity: initial;
-      top: initial;
-    }
-
-    .use-motion {
-      .logo-line-before i { left: initial; }
-      .logo-line-after i { right: initial; }
-    }
-  </style>
-</noscript>
-
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
 
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left page-post-detail">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Maple Story</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
-    
   </div>
 
-  <div class="site-nav-toggle">
-    <button aria-label="切换导航栏">
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Maple Story</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
   </div>
 </div>
 
 
 
 <nav class="site-nav">
-  
-    <ul id="menu" class="menu">
-      
-        
-        
-        
-          
-          <li class="menu-item menu-item-home">
-    <a href="/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-tags">
-    <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-categories">
-    <a href="/categories/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-archives">
-    <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-series">
-    <a href="/series/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>系列</a>
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-resource">
-    <a href="/resource/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-file"></i> <br>资源</a>
-  </li>
-
-      
-      
-    </ul>
-  
-
-  
-    
-
-  
-
-  
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+  </ul>
 </nav>
 
 
 
+
+</header>
+        
   
+  <aside class="sidebar">
 
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
 
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-number">1.</span> <span class="nav-text">基本概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%B6%E9%97%B4"><span class="nav-number">2.</span> <span class="nav-text">时间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%A5%E6%9C%9F"><span class="nav-number">3.</span> <span class="nav-text">日期</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%B6%E9%97%B4%E6%88%B3"><span class="nav-number">4.</span> <span class="nav-text">时间戳</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%B6%E5%8C%BA"><span class="nav-number">5.</span> <span class="nav-text">时区</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%B6%E9%97%B4%E6%A0%87%E5%87%86"><span class="nav-number">6.</span> <span class="nav-text">时间标准</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#GMT-%E6%A0%BC%E6%9E%97%E5%B0%BC%E6%B2%BB%E6%A0%87%E5%87%86%E6%97%B6"><span class="nav-number">6.1.</span> <span class="nav-text">GMT 格林尼治标准时</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UTC-%E5%8D%8F%E8%B0%83%E4%B8%96%E7%95%8C%E6%97%B6"><span class="nav-number">6.2.</span> <span class="nav-text">UTC 协调世界时</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9C%B0%E5%8C%BA%E6%97%B6%E9%97%B4"><span class="nav-number">7.</span> <span class="nav-text">地区时间</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#PST-%E5%A4%AA%E5%B9%B3%E6%B4%8B%E6%97%B6%E5%8C%BA"><span class="nav-number">7.1.</span> <span class="nav-text">PST 太平洋时区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CST-%E4%B8%AD%E5%9B%BD%E6%A0%87%E5%87%86%E6%97%B6%E9%97%B4"><span class="nav-number">7.2.</span> <span class="nav-text">CST 中国标准时间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ISO-8601"><span class="nav-number">7.3.</span> <span class="nav-text">ISO 8601</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="nav-number">8.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
 
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Maple"
+      src="https://p3.music.126.net/Am30CzvY9NTxy1xiz5k3GQ==/7729566744520405.jpg?param=170y170">
+  <p class="site-author-name" itemprop="name">Maple</p>
+  <div class="site-description" itemprop="description">以铜为镜，可以正衣冠；<br />以史为镜，可以知兴替；<br />以人为镜，可以明得失。</div>
 </div>
-    </header>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">37</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">45</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/yamdestiny" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;yamdestiny" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://steamcommunity.com/id/maple_wqs" title="Steam → https:&#x2F;&#x2F;steamcommunity.com&#x2F;id&#x2F;maple_wqs" rel="noopener me" target="_blank"><i class="fab fa-steam fa-fw"></i>Steam</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
 
     
-  
-  
-  
-    
-      
-    
-    <a href="https://github.com/YamDestiny" class="github-corner" target="_blank" title="Follow me on GitHub" aria-label="Follow me on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#222; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg>
-    
-      </a>
-    
+  </aside>
 
 
+    </div>
 
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-          <div id="content" class="content">
-            
+    <div class="main-inner post posts-expand">
 
-  <div id="posts" class="posts-expand">
-    
 
   
 
-  
+
+<div class="post-block">
   
   
 
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://yamdestiny.xyz/2019/02/27/date-and-time/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Maple">
-      <meta itemprop="description" content="以铜为镜，可以正衣冠；<br />以史为镜，可以知兴替；<br />以人为镜，可以明得失。">
       <meta itemprop="image" content="https://p3.music.126.net/Am30CzvY9NTxy1xiz5k3GQ==/7729566744520405.jpg?param=170y170">
+      <meta itemprop="name" content="Maple">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Maple Story">
+      <meta itemprop="description" content="以铜为镜，可以正衣冠；<br />以史为镜，可以知兴替；<br />以人为镜，可以明得失。">
     </span>
 
-    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="日期与时间 | Maple Story">
+      <meta itemprop="description" content="">
+    </span>
       <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          日期与时间
+        </h1>
 
-        
-        
-          <h1 class="post-title" itemprop="name headline">日期与时间
-              
-            
-          </h1>
-        
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
 
-        <div class="post-meta">
-          <span class="post-time">
+      <time title="创建时间：2019-02-27 21:21:37" itemprop="dateCreated datePublished" datetime="2019-02-27T21:21:37+08:00">2019-02-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-11-07 13:04:52" itemprop="dateModified" datetime="2024-11-07T13:04:52+08:00">2024-11-07</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/coder/" itemprop="url" rel="index"><span itemprop="name">coder</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/coder/basics/" itemprop="url" rel="index"><span itemprop="name">basics</span></a>
+        </span>
+    </span>
 
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-02-27 21:21:37" itemprop="dateCreated datePublished" datetime="2019-02-27T21:21:37+08:00">2019-02-27</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2024-03-14 18:33:10" itemprop="dateModified" datetime="2024-03-14T18:33:10+08:00">2024-03-14</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/衣带渐宽终不悔，为伊消得人憔悴/" itemprop="url" rel="index"><span itemprop="name">衣带渐宽终不悔，为伊消得人憔悴</span></a></span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/衣带渐宽终不悔，为伊消得人憔悴/Other/" itemprop="url" rel="index"><span itemprop="name">Other</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/02/27/date-and-time/#comments" itemprop="discussionUrl">
-                
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/02/27/date-and-time/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
+  
+    <span class="post-meta-item" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="firestore-visitors-count"></span>
+    </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2019/02/27/date-and-time/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/02/27/date-and-time/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
 
         </div>
       </header>
-    
 
     
     
     
-    <div class="post-body" itemprop="articleBody">
+    <div class="post-body" itemprop="articleBody"><p>关于日期、时间、时间戳与时区的整理</p>
+<span id="more"></span>
 
-      
-      
-
-      
-        <p>关于日期、时间、时间戳与时区的整理</p>
-<a id="more"></a>
 <h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><p>以常用理解表述：</p>
 <ul>
 <li>时间（Time）：表示时分秒</li>
@@ -498,8 +290,7 @@
 <th>12小时制</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>00:00</td>
 <td>12:00 AM（midnight、子夜）</td>
 </tr>
@@ -527,8 +318,7 @@
 <td>24:00(第二天 00:00)</td>
 <td>12:00 PM（midnight、午夜）</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <h2 id="日期"><a href="#日期" class="headerlink" title="日期"></a>日期</h2><p>通常使用：</p>
 <ul>
 <li>YYYY-MM-DD: 即 2019-02-27 (<code>ISO 8601</code>)</li>
@@ -551,15 +341,15 @@
 <li>1256953732 (Unix time)</li>
 <li>(1969-07-21 T 02:56 UTC) –</li>
 <li>07:38, 11 December 2012 (UTC)</li>
-<li>1985-102 T 10:15 UTC (day 102 of year 1985 = 12 April 1985)</li>
-<li>1985-W15-5 T 10:15 UTC (day 5 of week 15 of year 1985 = 12 April 1985)</li>
-<li>20180203073000 (02/03/2018 7:30:00)</li>
+<li>1985-102 T 10:15 UTC (day 102 of year 1985 &#x3D; 12 April 1985)</li>
+<li>1985-W15-5 T 10:15 UTC (day 5 of week 15 of year 1985 &#x3D; 12 April 1985)</li>
+<li>20180203073000 (02&#x2F;03&#x2F;2018 7:30:00)</li>
 </ul>
 <h2 id="时区"><a href="#时区" class="headerlink" title="时区"></a>时区</h2><p>在公元1884年的国际会议上制定了全球性的标准时，明定以英国伦敦格林威治这个地方为零度经线的起点（亦称为本初子午线），并以地球由西向东每24小时自转一周360°，订定每隔经度15°，时差1小时。而每15°的经线则称为该时区的中央经线，将全球划分为24个时区，其中包含23个整时区及180°经线左右两侧的2个半时区。就全球的时间来看，东经的时间比西经要早，也就是如果格林威治时间是中午12时，则中央经线15°E的时区为下午1时，中央经线30°E时区的时间为下午2时；反之，中央经线15°W的时区时间为上午11时，中央经线30°W时区的时间为上午10时。以台湾为例，台湾位于东经121°，换算后与格林威治就有8小时的时差。如果两人同时从格林威治的0°各往东、西方前进，当他们在经线180°时，就会相差24小时，所以经线180°被定为国际换日线，由西向东通过此线时日期要减去一日，反之，若由东向西则要增加一日。</p>
 <h2 id="时间标准"><a href="#时间标准" class="headerlink" title="时间标准"></a>时间标准</h2><h3 id="GMT-格林尼治标准时"><a href="#GMT-格林尼治标准时" class="headerlink" title="GMT 格林尼治标准时"></a>GMT 格林尼治标准时</h3><p>格林尼治标准时（英语：Greenwich Mean Time，GMT）是指位于英国伦敦郊区的皇家格林尼治天文台当地的平太阳时，因为本初子午线被定义为通过那里的经线。</p>
 <p>自1924年2月5日开始，格林尼治天文台负责每隔一小时向全世界发放调时信息。</p>
 <p>格林尼治平时的正午是指当平太阳横穿格林尼治子午线时（也就是在格林尼治上空最高点时）的时间。由于地球每天的自转是有些不规则的，而且正在缓慢减速，因此格林尼治平时基于天文观测本身的缺陷，已经被原子钟报时的协调世界时（UTC）所取代。</p>
-<h3 id="UTC-协调世界时"><a href="#UTC-协调世界时" class="headerlink" title="UTC 协调世界时"></a>UTC 协调世界时</h3><p>协调世界时（英语：Coordinated Universal Time，法语：Temps Universel Coordonné，简称UTC）是最主要的世界时间标准，其以原子时秒长为基础，在时刻上尽量接近于格林尼治标准时间。中华民国采用CNS 7648的《资料元及交换格式–资讯交换–日期及时间的表示法》（与ISO 8601类似）称之为世界协调时间。中华人民共和国采用ISO 8601:2000的国家标准GB/T 7408-2005《数据元和交换格式 信息交换 日期和时间表示法》中亦称之为协调世界时。</p>
+<h3 id="UTC-协调世界时"><a href="#UTC-协调世界时" class="headerlink" title="UTC 协调世界时"></a>UTC 协调世界时</h3><p>协调世界时（英语：Coordinated Universal Time，法语：Temps Universel Coordonné，简称UTC）是最主要的世界时间标准，其以原子时秒长为基础，在时刻上尽量接近于格林尼治标准时间。中华民国采用CNS 7648的《资料元及交换格式–资讯交换–日期及时间的表示法》（与ISO 8601类似）称之为世界协调时间。中华人民共和国采用ISO 8601:2000的国家标准GB&#x2F;T 7408-2005《数据元和交换格式 信息交换 日期和时间表示法》中亦称之为协调世界时。</p>
 <p>协调世界时是世界上调节时钟和时间的主要时间标准，它与0度经线的平太阳时相差不超过1秒，并不遵守夏令时。协调世界时是最接近格林威治标准时间（GMT）的几个替代时间系统之一。对于大多数用途来说，UTC时间被认为能与GMT时间互换，但GMT时间已不再被科学界所确定。</p>
 <p>协调世界时（UTC）正式形成于1960年国际无线电咨询委员会的374号建议中，该建议由多国时间实验室共同提出。人们对该时间系统进行过数次调整，直到1972年引入了闰秒机制，调整工作得以简化。也有很多人提议用一个没有闰秒的时间系统来替换掉协调世界时，但目前尚未就此达成一致。</p>
 <h2 id="地区时间"><a href="#地区时间" class="headerlink" title="地区时间"></a>地区时间</h2><h3 id="PST-太平洋时区"><a href="#PST-太平洋时区" class="headerlink" title="PST 太平洋时区"></a>PST 太平洋时区</h3><p>太平洋时区（英语：Pacific Time Zone）是在美国、加拿大及墨西哥西海岸靠近太平洋地区使用的时区。</p>
@@ -586,573 +376,107 @@
 <li>2019-02-27T08:36:54Z</li>
 </ul>
 </li>
-<li>周数:    2019-W09</li>
+<li>周数:	2019-W09</li>
 <li>当前日期与周数: 2019-W09-1</li>
-<li>当前初始累计日数:    2019-058</li>
+<li>当前初始累计日数:	2019-058</li>
 </ul>
 <h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ul>
-<li><a href="https://en.wikipedia.org/wiki/12-hour_clock" target="_blank" rel="noopener">12小时制</a></li>
-<li><a href="https://en.wikipedia.org/wiki/24-hour_clock" target="_blank" rel="noopener">24小时制</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Calendar_date" target="_blank" rel="noopener">Calendar date</a></li>
-<li><a href="https://en.wikipedia.org/wiki/ISO_8601" target="_blank" rel="noopener">ISO 8601</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Timestamp" target="_blank" rel="noopener">时间戳</a></li>
-<li><a href="http://www.51testing.com/html/74/248074-209865.html" target="_blank" rel="noopener">24时区，GMT，UTC，DST，CST时间详解</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Greenwich_Mean_Time" target="_blank" rel="noopener">格林尼治标准时</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Coordinated_Universal_Time" target="_blank" rel="noopener">协调世界时</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Pacific_Time_Zone" target="_blank" rel="noopener">太平洋时区</a></li>
-<li><a href="http://www.timeofdate.com/articles/posts/standard-time.html" target="_blank" rel="noopener">什么是标准时间？</a></li>
-<li><a href="https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%9C%8B%E6%99%82%E5%8D%80" target="_blank" rel="noopener">中国时区</a></li>
+<li><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/12-hour_clock">12小时制</a></li>
+<li><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/24-hour_clock">24小时制</a></li>
+<li><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Calendar_date">Calendar date</a></li>
+<li><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a></li>
+<li><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Timestamp">时间戳</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.51testing.com/html/74/248074-209865.html">24时区，GMT，UTC，DST，CST时间详解</a></li>
+<li><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Greenwich_Mean_Time">格林尼治标准时</a></li>
+<li><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Coordinated_Universal_Time">协调世界时</a></li>
+<li><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Pacific_Time_Zone">太平洋时区</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.timeofdate.com/articles/posts/standard-time.html">什么是标准时间？</a></li>
+<li><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%9C%8B%E6%99%82%E5%8D%80">中国时区</a></li>
 </ul>
 
-      
     </div>
 
     
-
     
-    
-    
-
-    
-
-    
-
-    
-      <div>
-        <ul class="post-copyright">
-  <li class="post-copyright-author">
-    <strong>本文作者： </strong>Maple</li>
-  <li class="post-copyright-link">
-    <strong>本文链接：</strong>
-    <a href="https://yamdestiny.xyz/2019/02/27/date-and-time/" title="日期与时间">https://yamdestiny.xyz/2019/02/27/date-and-time/</a>
-  </li>
-  <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
-</ul>
-
-      </div>
     
 
     <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/Time/" rel="tag"># Time</a>
-          
-            <a href="/tags/Date/" rel="tag"># Date</a>
-          
-            <a href="/tags/Timestamp/" rel="tag"># Timestamp</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2018/12/09/java-web-startup-sequence/" rel="next" title="Java Web 启动加载顺序简述">
-                <i class="fa fa-chevron-left"></i> Java Web 启动加载顺序简述
-              </a>
-            
+          <div class="post-tags">
+              <a href="/tags/Time/" rel="tag"># Time</a>
+              <a href="/tags/Date/" rel="tag"># Date</a>
+              <a href="/tags/Timestamp/" rel="tag"># Timestamp</a>
           </div>
 
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/03/08/how-to-use-statsvn/" rel="prev" title="如何使用 StatSVN">
-                如何使用 StatSVN <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-
-    <div class="post-spread">
-      
-    </div>
-  </div>
-
-
-          </div>
-          
-
-  
-    <div class="comments" id="comments">
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
-      </div>
-    </div>
-
-  
-
-
-
-        </div>
         
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
 
-  <aside id="sidebar" class="sidebar">
-    
-    <div class="sidebar-inner">
-
-      
-
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
-
-      <section class="site-overview-wrap sidebar-panel">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <img class="site-author-image" itemprop="image" src="https://p3.music.126.net/Am30CzvY9NTxy1xiz5k3GQ==/7729566744520405.jpg?param=170y170" alt="Maple">
-            
-              <p class="site-author-name" itemprop="name">Maple</p>
-              <p class="site-description motion-element" itemprop="description">以铜为镜，可以正衣冠；<br>以史为镜，可以知兴替；<br>以人为镜，可以明得失。</p>
-          </div>
-
-          
-            <nav class="site-state motion-element">
-              
-                <div class="site-state-item site-state-posts">
-                
-                  <a href="/archives/">
-                
-                    <span class="site-state-item-count">51</span>
-                    <span class="site-state-item-name">日志</span>
-                  </a>
-                </div>
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-categories">
-                  <a href="/categories/index.html">
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">17</span>
-                    <span class="site-state-item-name">分类</span>
-                  </a>
-                </div>
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-tags">
-                  <a href="/tags/index.html">
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">49</span>
-                    <span class="site-state-item-name">标签</span>
-                  </a>
-                </div>
-              
-            </nav>
-          
-
-          
-
-          
-            <div class="links-of-author motion-element">
-              
-                <span class="links-of-author-item">
-                  <a href="https://github.com/YamDestiny" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a>
-                  
-                </span>
-              
-                <span class="links-of-author-item">
-                  <a href="https://steamcommunity.com/id/maple_wqs" target="_blank" title="Steam"><i class="fa fa-fw fa-steam"></i>Steam</a>
-                  
-                </span>
-              
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2018/12/09/java-web-startup-sequence/" rel="prev" title="Java Web 启动加载顺序简述">
+                  <i class="fa fa-angle-left"></i> Java Web 启动加载顺序简述
+                </a>
             </div>
-          
-
-          
-          
-
-          
-          
-
-          
-            
-          
-          
-
-        </div>
-      </section>
-
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本概念"><span class="nav-number">1.</span> <span class="nav-text">基本概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#时间"><span class="nav-number">2.</span> <span class="nav-text">时间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#日期"><span class="nav-number">3.</span> <span class="nav-text">日期</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#时间戳"><span class="nav-number">4.</span> <span class="nav-text">时间戳</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#时区"><span class="nav-number">5.</span> <span class="nav-text">时区</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#时间标准"><span class="nav-number">6.</span> <span class="nav-text">时间标准</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#GMT-格林尼治标准时"><span class="nav-number">6.1.</span> <span class="nav-text">GMT 格林尼治标准时</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UTC-协调世界时"><span class="nav-number">6.2.</span> <span class="nav-text">UTC 协调世界时</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#地区时间"><span class="nav-number">7.</span> <span class="nav-text">地区时间</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#PST-太平洋时区"><span class="nav-number">7.1.</span> <span class="nav-text">PST 太平洋时区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CST-中国标准时间"><span class="nav-number">7.2.</span> <span class="nav-text">CST 中国标准时间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ISO-8601"><span class="nav-number">7.3.</span> <span class="nav-text">ISO 8601</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文献"><span class="nav-number">8.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
-            
-
+            <div class="post-nav-item">
+                <a href="/2019/03/08/how-to-use-statsvn/" rel="next" title="如何使用 StatSVN">
+                  如何使用 StatSVN <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
           </div>
-        </section>
-      <!--/noindex-->
-      
-
-      
-
-    </div>
-  </aside>
-
-
-        
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2024</span>
-  <span class="with-love" id="animate">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Maple</span>
-
-  
-
-  
+    </footer>
+  </article>
 </div>
 
 
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.9.0</div>
 
-
-
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Muse</a> v6.3.0</div>
-
-
-
-
-        
-
-
-
-
-
-
-
-
-        
-      </div>
-    </footer>
 
     
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
+  <div class="comments" id="disqus_thread">
+    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+  </div>
+  
+</div>
+  </main>
 
-    
+  <footer class="footer">
+    <div class="footer-inner">
 
+  <div class="copyright">
+    &copy; 2016 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Maple</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>
 
+    </div>
+  </footer>
+
   
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
 
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
+  <a href="https://github.com/yamdestiny" class="github-corner" title="在 GitHub 上关注我" aria-label="在 GitHub 上关注我" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
 
 
   
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=6.3.0"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=6.3.0"></script>
-
-
-
-  
-  
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.3.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=6.3.0"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.3.0"></script>
-
-
-
-  
-
-  
-    <script id="dsq-count-scr" src="https://yamdestiny.disqus.com/count.js" async></script>
-  
-
-  
-    <script type="text/javascript">
-      var disqus_config = function () {
-        this.page.url = 'https://yamdestiny.xyz/2019/02/27/date-and-time/';
-        this.page.identifier = '2019/02/27/date-and-time/';
-        this.page.title = '日期与时间';
-        };
-      function loadComments () {
-        var d = document, s = d.createElement('script');
-        s.src = 'https://yamdestiny.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', '' + +new Date());
-        (d.head || d.body).appendChild(s);
-      }
-      
-        $(function () {
-          var offsetTop = $('#comments').offset().top - $(window).height();
-          if (offsetTop <= 0) {
-            // load directly when there's no a scrollbar
-            loadComments();
-          } else {
-            $(window).on('scroll.disqus_scroll', function () {
-              var scrollTop = document.documentElement.scrollTop;
-              if (scrollTop >= offsetTop) {
-                $(window).off('.disqus_scroll');
-                loadComments();
-              }
-            });
-          }
-        });
-      
-    </script>
-  
-
-
-
-
-
-	
-
-
-
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
 
   
 
@@ -1161,165 +485,23 @@
 
 
 
+  
 
-
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/10.13.1/firebase-app-compat.js" integrity="sha256-7rbzO720n5u7kECmcdVLacW6cCRHp4pCxJ3qljsmAm8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/10.13.1/firebase-firestore-compat.js" integrity="sha256-XEP1DXy0gbkgjmlLmNJBgjH2EpbmHPAr5oTrIJHEfm4=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="firestore" type="application/json">{"enable":true,"collection":"articles","apiKey":"AIzaSyAH4dEdG6GM_aaAvaffL1d8GZ_i5TdpW-0","projectId":"yamdestiny-c467b"}</script>
+  <script src="/js/third-party/statistics/firestore.js"></script>
 
 
 
   
 
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
 
 
-
-
-  
-
-  
-  <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase-firestore.js"></script>
-  
-  <script>
-    (function () {
-
-      firebase.initializeApp({
-        apiKey: 'AIzaSyAH4dEdG6GM_aaAvaffL1d8GZ_i5TdpW-0',
-        projectId: 'yamdestiny-c467b'
-      })
-
-      function getCount(doc, increaseCount) {
-        //increaseCount will be false when not in article page
-
-        return doc.get().then(function (d) {
-          var count
-          if (!d.exists) { //has no data, initialize count
-            if (increaseCount) {
-              doc.set({
-                count: 1
-              })
-              count = 1
-            }
-            else {
-              count = 0
-            }
-          }
-          else { //has data
-            count = d.data().count
-            if (increaseCount) {
-              if (!(window.localStorage && window.localStorage.getItem(title))) { //if first view this article
-                doc.set({ //increase count
-                  count: count + 1
-                })
-                count++
-              }
-            }
-          }
-          if (window.localStorage && increaseCount) { //mark as visited
-            localStorage.setItem(title, true)
-          }
-
-          return count
-        })
-      }
-
-      function appendCountTo(el) {
-        return function (count) {
-          $(el).append(
-            $('<span>').addClass('post-visitors-count').append(
-              $('<span>').addClass('post-meta-divider').text('|')
-            ).append(
-              $('<span>').addClass('post-meta-item-icon').append(
-                $('<i>').addClass('fa fa-users')
-              )
-              ).append($('<span>').text('阅读次数 ' + count))
-          )
-        }
-      }
-
-      var db = firebase.firestore()
-      var articles = db.collection('articles')
-
-      //https://hexo.io/zh-tw/docs/variables.html
-      var isPost = '日期与时间'.length > 0
-      var isArchive = '' === 'true'
-      var isCategory = ''.length > 0
-      var isTag = ''.length > 0
-
-      if (isPost) { //is article page
-        var title = '日期与时间'
-        var doc = articles.doc(title)
-
-        getCount(doc, true).then(appendCountTo($('.post-meta')))
-      }
-      else if (!isArchive && !isCategory && !isTag) { //is index page
-        var titles = [] //array to titles
-
-        var postsstr = '' //if you have a better way to get titles of posts, please change it
-        eval(postsstr)
-
-        var promises = titles.map(function (title) {
-          return articles.doc(title)
-        }).map(function (doc) {
-          return getCount(doc)
-        })
-        Promise.all(promises).then(function (counts) {
-          var metas = $('.post-meta')
-          counts.forEach(function (val, idx) {
-            appendCountTo(metas[idx])(val)
-          })
-        })
-      }
-    })()
-  </script>
-
-
-  
-
-  
-  
-
-  
-  
-
-  
-    
-      <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-      tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-        processEscapes: true,
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-      },
-      TeX: {equationNumbers: { autoNumber: "AMS" }}
-    });
-</script>
-
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Queue(function() {
-      var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-    });
-</script>
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-    
-  
-
-
-  
-  
-
-  
-
-  
-
-  
-
-  
-
-  
+<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"yamdestiny","count":true,"i18n":{"disqus":"disqus"}}</script>
+<script src="/js/third-party/comments/disqus.js"></script>
 
 </body>
 </html>
