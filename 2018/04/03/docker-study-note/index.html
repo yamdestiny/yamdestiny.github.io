@@ -21,26 +21,26 @@
 
     <meta name="description" content="Docker - Build, Ship, and Run Any App, Anywhere">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Docker 使用入门">
-<meta property="og:url" content="https://yamdestiny.xyz/2018/04/03/docker-tutorial/index.html">
+<meta property="og:title" content="Docker 使用学习笔记">
+<meta property="og:url" content="https://yamdestiny.xyz/2018/04/03/docker-study-note/index.html">
 <meta property="og:site_name" content="Maple Story">
 <meta property="og:description" content="Docker - Build, Ship, and Run Any App, Anywhere">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2018-04-03T11:20:13.000Z">
-<meta property="article:modified_time" content="2024-11-07T05:09:15.680Z">
+<meta property="article:modified_time" content="2024-11-07T15:44:15.486Z">
 <meta property="article:author" content="Maple">
 <meta property="article:tag" content="Docker">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://yamdestiny.xyz/2018/04/03/docker-tutorial/">
+<link rel="canonical" href="https://yamdestiny.xyz/2018/04/03/docker-study-note/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://yamdestiny.xyz/2018/04/03/docker-tutorial/","path":"2018/04/03/docker-tutorial/","title":"Docker 使用入门"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://yamdestiny.xyz/2018/04/03/docker-study-note/","path":"2018/04/03/docker-study-note/","title":"Docker 使用学习笔记"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Docker 使用入门 | Maple Story</title>
+<title>Docker 使用学习笔记 | Maple Story</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-92396016-1"></script>
   <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-92396016-1","only_pageview":false,"measure_protocol_api_secret":null}</script>
@@ -178,7 +178,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://yamdestiny.xyz/2018/04/03/docker-tutorial/">
+    <link itemprop="mainEntityOfPage" href="https://yamdestiny.xyz/2018/04/03/docker-study-note/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://p3.music.126.net/Am30CzvY9NTxy1xiz5k3GQ==/7729566744520405.jpg?param=170y170">
@@ -191,12 +191,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Docker 使用入门 | Maple Story">
+      <meta itemprop="name" content="Docker 使用学习笔记 | Maple Story">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Docker 使用入门
+          Docker 使用学习笔记
         </h1>
 
         <div class="post-meta-container">
@@ -214,7 +214,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-11-07 13:09:15" itemprop="dateModified" datetime="2024-11-07T13:09:15+08:00">2024-11-07</time>
+      <time title="修改时间：2024-11-07 23:44:15" itemprop="dateModified" datetime="2024-11-07T23:44:15+08:00">2024-11-07</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -239,8 +239,8 @@
       </span>
       <span class="post-meta-item-text">Disqus：</span>
     
-    <a title="disqus" href="/2018/04/03/docker-tutorial/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/04/03/docker-tutorial/" itemprop="commentCount"></span>
+    <a title="disqus" href="/2018/04/03/docker-study-note/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/04/03/docker-study-note/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -299,18 +299,17 @@
 <li><a target="_blank" rel="noopener" href="https://docs.docker.com/install/linux/docker-ce/binaries/">其他 Linux 发行版</a></li>
 </ul>
 <p>安装完成后，运行以下命令，检查是否安装成功</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ docker --version</span><br><span class="line">Docker version 17.12.0-ce, build c97c6d6</span><br><span class="line">$ </span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ docker --version</span><br><span class="line">Docker version 17.12.0-ce, build c97c6d6</span><br></pre></td></tr></table></figure>
 
-
-<h2 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello, World"></a>Hello, World</h2><p>使用<code>docker run [image]</code>命令来在容器内运行一个应用程序。</p>
-<h3 id="简单实验"><a href="#简单实验" class="headerlink" title="简单实验"></a>简单实验</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">$ docker run hello-world</span><br><span class="line"></span><br><span class="line">Unable to find image <span class="string">&#x27;hello-world:latest&#x27;</span> locally</span><br><span class="line">latest: Pulling from library/hello-world</span><br><span class="line">ca4f61b1923c: Pull complete </span><br><span class="line">Digest: sha256:97ce6fa4b6cdc0790cda65fe7290b74cfebd9fa0c9b8c38e979330d547d22ce1</span><br><span class="line">Status: Downloaded newer image <span class="keyword">for</span> hello-world:latest</span><br><span class="line"></span><br><span class="line">Hello from Docker!</span><br><span class="line">This message shows that your installation appears to be working correctly.</span><br><span class="line"></span><br><span class="line">To generate this message, Docker took the following steps:</span><br><span class="line"> 1. The Docker client contacted the Docker daemon.</span><br><span class="line"> 2. The Docker daemon pulled the <span class="string">&quot;hello-world&quot;</span> image from the Docker Hub.</span><br><span class="line">    (amd64)</span><br><span class="line"> 3. The Docker daemon created a new container from that image <span class="built_in">which</span> runs the</span><br><span class="line">    executable that produces the output you are currently reading.</span><br><span class="line"> 4. The Docker daemon streamed that output to the Docker client, <span class="built_in">which</span> sent it</span><br><span class="line">    to your terminal.</span><br><span class="line"></span><br><span class="line">To try something more ambitious, you can run an Ubuntu container with:</span><br><span class="line"> $ docker run -it ubuntu bash</span><br><span class="line"></span><br><span class="line">Share images, automate workflows, and more with a free Docker ID:</span><br><span class="line"> https://cloud.docker.com/</span><br><span class="line"></span><br><span class="line">For more examples and ideas, visit:</span><br><span class="line"> https://docs.docker.com/engine/userguide/</span><br></pre></td></tr></table></figure>
+<h2 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello, World"></a>Hello, World</h2><p>使用 <code>docker run [image]</code> 命令来在容器内运行一个应用程序。</p>
+<h3 id="简单实验"><a href="#简单实验" class="headerlink" title="简单实验"></a>简单实验</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">$ docker run hello-world</span><br><span class="line"></span><br><span class="line">Unable to find image <span class="string">&#x27;hello-world:latest&#x27;</span> locally</span><br><span class="line">latest: Pulling from library/hello-world</span><br><span class="line">ca4f61b1923c: Pull complete </span><br><span class="line">Digest: sha256:97ce6fa4b6cdc0790cda65fe7290b74cfebd9fa0c9b8c38e979330d547d22ce1</span><br><span class="line">Status: Downloaded newer image <span class="keyword">for</span> hello-world:latest</span><br><span class="line"></span><br><span class="line">Hello from Docker!</span><br><span class="line">This message shows that your installation appears to be working correctly.</span><br><span class="line"></span><br><span class="line">To generate this message, Docker took the following steps:</span><br><span class="line"> 1. The Docker client contacted the Docker daemon.</span><br><span class="line"> 2. The Docker daemon pulled the <span class="string">&quot;hello-world&quot;</span> image from the Docker Hub.</span><br><span class="line">    (amd64)</span><br><span class="line"> 3. The Docker daemon created a new container from that image <span class="built_in">which</span> runs the</span><br><span class="line">    executable that produces the output you are currently reading.</span><br><span class="line"> 4. The Docker daemon streamed that output to the Docker client, <span class="built_in">which</span> sent it</span><br><span class="line">    to your terminal.</span><br><span class="line"></span><br><span class="line">To try something more ambitious, you can run an Ubuntu container with:</span><br><span class="line"> $ docker run -it ubuntu sh</span><br><span class="line"></span><br><span class="line">Share images, automate workflows, and more with a free Docker ID:</span><br><span class="line"> https://cloud.docker.com/</span><br><span class="line"></span><br><span class="line">For more examples and ideas, visit:</span><br><span class="line"> https://docs.docker.com/engine/userguide/</span><br></pre></td></tr></table></figure>
 
 <h3 id="查看镜像与容器"><a href="#查看镜像与容器" class="headerlink" title="查看镜像与容器"></a>查看镜像与容器</h3><ol>
 <li><p>列出下载到本地的<code>hello-world</code>镜像：</p>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker image <span class="built_in">ls</span></span><br></pre></td></tr></table></figure>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker image <span class="built_in">ls</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>列出已创建的容器</p>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ docker container <span class="built_in">ls</span> --all</span><br><span class="line">CONTAINER ID     IMAGE           COMMAND      CREATED            STATUS</span><br><span class="line">9c3729544f4e     hello-world     <span class="string">&quot;/hello&quot;</span>     10 seconds ago     Exited (0) 9 seconds ago</span><br></pre></td></tr></table></figure></li>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ docker container <span class="built_in">ls</span> --all</span><br><span class="line">CONTAINER ID     IMAGE           COMMAND      CREATED            STATUS</span><br><span class="line">9c3729544f4e     hello-world     <span class="string">&quot;/hello&quot;</span>     10 seconds ago     Exited (0) 9 seconds ago</span><br></pre></td></tr></table></figure></li>
 </ol>
 <h3 id="运行说明"><a href="#运行说明" class="headerlink" title="运行说明"></a>运行说明</h3><ol>
 <li><code>Docker run hello-world</code>包含了以下步骤：<ol>
@@ -335,7 +334,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://yamdestiny.xyz/2018/04/03/docker-tutorial/" title="Docker 使用入门">https://yamdestiny.xyz/2018/04/03/docker-tutorial/</a>
+      <a href="https://yamdestiny.xyz/2018/04/03/docker-study-note/" title="Docker 使用学习笔记">https://yamdestiny.xyz/2018/04/03/docker-study-note/</a>
   </li>
   <li class="post-copyright-license">
       <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -356,8 +355,8 @@
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2018/06/09/dubbo-tutorial/" rel="next" title="Dubbo 使用入门">
-                  Dubbo 使用入门 <i class="fa fa-angle-right"></i>
+                <a href="/2018/06/09/dubbo-study-note/" rel="next" title="Dubbo 使用学习笔记">
+                  Dubbo 使用学习笔记 <i class="fa fa-angle-right"></i>
                 </a>
             </div>
           </div>
