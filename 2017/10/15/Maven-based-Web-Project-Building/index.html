@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha256-5eIC48iZUHmSlSUz9XtjRyK2mzQkHScZY1WdMaoz74E=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"yamdestiny.xyz","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.21.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqus","storage":true,"lazyload":true,"nav":null,"activeClass":"disqus"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"yamdestiny.xyz","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.21.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"hide","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqus","storage":true,"lazyload":true,"nav":null,"activeClass":"disqus"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="基于 Maven 的 Web 项目搭建">
 <meta property="og:type" content="article">
@@ -39,10 +39,9 @@
 <meta property="og:image" content="https://yamdestiny-1254804190.coscd.myqcloud.com/images/new_maven_spring/first_check_error.png">
 <meta property="og:image" content="https://yamdestiny-1254804190.coscd.myqcloud.com/images/new_maven_spring/first_check.png">
 <meta property="article:published_time" content="2017-10-15T07:02:05.000Z">
-<meta property="article:modified_time" content="2024-11-07T15:32:41.559Z">
+<meta property="article:modified_time" content="2024-11-11T08:47:39.581Z">
 <meta property="article:author" content="Maple">
-<meta property="article:tag" content="Java">
-<meta property="article:tag" content="Maven">
+<meta property="article:tag" content="Java Web">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://yamdestiny-1254804190.coscd.myqcloud.com/images/new_maven_spring/new_maven_project_1.png">
 
@@ -95,6 +94,7 @@
       <p class="site-title">Maple Story</p>
       <i class="logo-line"></i>
     </a>
+      <p class="site-subtitle" itemprop="description">Welcome to Maple Story 🍁</p>
   </div>
 
   <div class="site-nav-right">
@@ -140,7 +140,7 @@
     <img class="site-author-image" itemprop="image" alt="Maple"
       src="https://p3.music.126.net/Am30CzvY9NTxy1xiz5k3GQ==/7729566744520405.jpg?param=170y170">
   <p class="site-author-name" itemprop="name">Maple</p>
-  <div class="site-description" itemprop="description">以铜为镜，可以正衣冠；<br />以史为镜，可以知兴替；<br />以人为镜，可以明得失。</div>
+  <div class="site-description" itemprop="description">coding trainee</div>
 </div>
 <div class="site-state-wrap animated">
   <nav class="site-state">
@@ -152,12 +152,12 @@
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">48</span>
+        <span class="site-state-item-count">34</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -201,7 +201,7 @@
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Maple Story">
-      <meta itemprop="description" content="以铜为镜，可以正衣冠；<br />以史为镜，可以知兴替；<br />以人为镜，可以明得失。">
+      <meta itemprop="description" content="coding trainee">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
@@ -222,26 +222,6 @@
       <span class="post-meta-item-text">发表于</span>
 
       <time title="创建时间：2017-10-15 15:02:05" itemprop="dateCreated datePublished" datetime="2017-10-15T15:02:05+08:00">2017-10-15</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-11-07 23:32:41" itemprop="dateModified" datetime="2024-11-07T23:32:41+08:00">2024-11-07</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/coder/" itemprop="url" rel="index"><span itemprop="name">coder</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/coder/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a>
-        </span>
     </span>
 
   
@@ -278,9 +258,9 @@
 <li><code>mvn archetype:generate</code>: 固定格式</li>
 <li><code>-DgroupId</code>: 组织标识（包名）</li>
 <li><code>-DartifactId</code>: 项目名称</li>
-<li><code>-DarchetypeArtifactId</code>: 指定ArchetypeId，常用以下两种：<ul>
-<li><code>maven-archetype-quickstart</code>: 创建一个Java Project</li>
-<li><code>maven-archetype-webapp</code>: 创建一个Java Web Project</li>
+<li><code>-DarchetypeArtifactId</code>: 指定 ArchetypeId，常用以下两种：<ul>
+<li><code>maven-archetype-quickstart</code>: 创建一个 Java Project</li>
+<li><code>maven-archetype-webapp</code>: 创建一个 Java Web Project</li>
 </ul>
 </li>
 <li><code>-DinteractiveMode</code>: 是否使用交互模式</li>
@@ -330,10 +310,10 @@
 </li>
 </ol>
 </li>
-<li><p>修改<code>Dynamic Web Module</code>（<code>maven-artchetype-webapp</code>版本较低，默认2.3）<br> <img src="https://yamdestiny-1254804190.coscd.myqcloud.com/images/new_maven_spring/modify_project_facets_1.png" alt="modify project facets 1" title="Modify Project Facets 1"></p>
+<li><p>修改<code>Dynamic Web Module</code>（<code>maven-artchetype-webapp</code>版本较低，默认 2.3）<br> <img src="https://yamdestiny-1254804190.coscd.myqcloud.com/images/new_maven_spring/modify_project_facets_1.png" alt="modify project facets 1" title="Modify Project Facets 1"></p>
 <ol>
 <li>直接修改会提示错误，先取消勾选，点击 Apply</li>
-<li>选择Version 3.1，勾选选项<br> <img src="https://yamdestiny-1254804190.coscd.myqcloud.com/images/new_maven_spring/modify_project_facets_2.png" alt="modify project facets 2" title="Modify Project Facets 2"></li>
+<li>选择 Version 3.1，勾选选项<br> <img src="https://yamdestiny-1254804190.coscd.myqcloud.com/images/new_maven_spring/modify_project_facets_2.png" alt="modify project facets 2" title="Modify Project Facets 2"></li>
 <li>点击<code>Further configuration available...</code><ul>
 <li>修改<code>Content director</code>: <code>WebContent</code> -&gt; <code>src/main/webapp</code></li>
 <li>勾选<code>Generate web.xml deployment descriptor</code><br> <img src="https://yamdestiny-1254804190.coscd.myqcloud.com/images/new_maven_spring/modify_project_facets_3.png" alt="modify project facets 3" title="Modify Project Facets 3"></li>
@@ -347,20 +327,20 @@
 <ul>
 <li>项目右键 -&gt; Maven -&gt; Update Project</li>
 <li>如遇如图报错<br> <img src="https://yamdestiny-1254804190.coscd.myqcloud.com/images/new_maven_spring/first_check_error.png" alt="First Check Error" title="First Check Error"><ul>
-<li>检查Workspace的<code>Compiler</code></li>
+<li>检查 Workspace 的<code>Compiler</code></li>
 <li>检查项目的<code>Compiler</code></li>
 <li>在<code>pom.xml</code>中添加如下信息  <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">build</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">finalName</span>&gt;</span>simpleDemo<span class="tag">&lt;/<span class="name">finalName</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">plugins</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.maven.plugins<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>maven-compiler-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">source</span>&gt;</span>1.8<span class="tag">&lt;/<span class="name">source</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">target</span>&gt;</span>1.8<span class="tag">&lt;/<span class="name">target</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">plugins</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">build</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p>添加一个Tomcat Server，启动项目<br><img src="https://yamdestiny-1254804190.coscd.myqcloud.com/images/new_maven_spring/first_check.png" alt="First Check" title="First Check"></p>
+<li><p>添加一个 Tomcat Server，启动项目<br><img src="https://yamdestiny-1254804190.coscd.myqcloud.com/images/new_maven_spring/first_check.png" alt="First Check" title="First Check"></p>
 </li>
 </ol>
 <h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
-<li><a target="_blank" rel="noopener" href="http://www.cnblogs.com/noteless/p/5213075.html">eclipse 创建maven 项目 动态web工程完整示例</a></li>
-<li><a target="_blank" rel="noopener" href="http://blog.csdn.net/edward0830ly/article/details/8748986">maven3常用命令、java项目搭建、web项目搭建详细图解</a></li>
-<li><a target="_blank" rel="noopener" href="http://www.cnblogs.com/leiOOlei/p/3361633.html">Maven3路程（三）用Maven创建第一个web项目(1)</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.cnblogs.com/noteless/p/5213075.html">eclipse 创建 maven 项目 动态 web 工程完整示例</a></li>
+<li><a target="_blank" rel="noopener" href="http://blog.csdn.net/edward0830ly/article/details/8748986">maven3 常用命令、java 项目搭建、web 项目搭建详细图解</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.cnblogs.com/leiOOlei/p/3361633.html">Maven3 路程（三）用 Maven 创建第一个 web 项目 (1)</a></li>
 <li><a target="_blank" rel="noopener" href="http://crunchify.com/how-to-solve-dynamic-web-module-3-1-requires-java-1-7-or-newer-in-eclipse/">How to solve “Dynamic Web Module 3.1 requires Java 1.7 or newer” in Eclipse</a></li>
 </ul>
 
@@ -389,8 +369,7 @@
 </div>
 
           <div class="post-tags">
-              <a href="/tags/Java/" rel="tag"># Java</a>
-              <a href="/tags/Maven/" rel="tag"># Maven</a>
+              <a href="/tags/Java-Web/" rel="tag"># Java Web</a>
           </div>
 
         

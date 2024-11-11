@@ -18,20 +18,19 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha256-5eIC48iZUHmSlSUz9XtjRyK2mzQkHScZY1WdMaoz74E=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"yamdestiny.xyz","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.21.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqus","storage":true,"lazyload":true,"nav":null,"activeClass":"disqus"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"yamdestiny.xyz","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.21.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"hide","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqus","storage":true,"lazyload":true,"nav":null,"activeClass":"disqus"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="在使用Oracle数据库时，发现导出的DMP文件，数据库结构不完整。缺少多个表。">
+    <meta name="description" content="在使用 Oracle 数据库时，发现导出的 DMP 文件，数据库结构不完整。缺少多个表。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Oracle Database 11g 使用 exp 命令导出 DMP 文件不完整">
 <meta property="og:url" content="https://yamdestiny.xyz/2017/02/14/Oracle-Database-11g-Export-DMP-incomplete/index.html">
 <meta property="og:site_name" content="Maple Story">
-<meta property="og:description" content="在使用Oracle数据库时，发现导出的DMP文件，数据库结构不完整。缺少多个表。">
+<meta property="og:description" content="在使用 Oracle 数据库时，发现导出的 DMP 文件，数据库结构不完整。缺少多个表。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2017-02-14T13:28:58.000Z">
-<meta property="article:modified_time" content="2024-11-07T15:21:31.625Z">
+<meta property="article:modified_time" content="2024-11-11T08:49:08.035Z">
 <meta property="article:author" content="Maple">
 <meta property="article:tag" content="Oracle Database">
-<meta property="article:tag" content="Oracle">
 <meta name="twitter:card" content="summary">
 
 
@@ -83,6 +82,7 @@
       <p class="site-title">Maple Story</p>
       <i class="logo-line"></i>
     </a>
+      <p class="site-subtitle" itemprop="description">Welcome to Maple Story 🍁</p>
   </div>
 
   <div class="site-nav-right">
@@ -128,7 +128,7 @@
     <img class="site-author-image" itemprop="image" alt="Maple"
       src="https://p3.music.126.net/Am30CzvY9NTxy1xiz5k3GQ==/7729566744520405.jpg?param=170y170">
   <p class="site-author-name" itemprop="name">Maple</p>
-  <div class="site-description" itemprop="description">以铜为镜，可以正衣冠；<br />以史为镜，可以知兴替；<br />以人为镜，可以明得失。</div>
+  <div class="site-description" itemprop="description">coding trainee</div>
 </div>
 <div class="site-state-wrap animated">
   <nav class="site-state">
@@ -140,12 +140,12 @@
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">48</span>
+        <span class="site-state-item-count">34</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -189,7 +189,7 @@
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Maple Story">
-      <meta itemprop="description" content="以铜为镜，可以正衣冠；<br />以史为镜，可以知兴替；<br />以人为镜，可以明得失。">
+      <meta itemprop="description" content="coding trainee">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
@@ -210,26 +210,6 @@
       <span class="post-meta-item-text">发表于</span>
 
       <time title="创建时间：2017-02-14 21:28:58" itemprop="dateCreated datePublished" datetime="2017-02-14T21:28:58+08:00">2017-02-14</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-11-07 23:21:31" itemprop="dateModified" datetime="2024-11-07T23:21:31+08:00">2024-11-07</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/coder/" itemprop="url" rel="index"><span itemprop="name">coder</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/coder/Practice/" itemprop="url" rel="index"><span itemprop="name">Practice</span></a>
-        </span>
     </span>
 
   
@@ -255,30 +235,30 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>在使用Oracle数据库时，发现导出的DMP文件，数据库结构不完整。缺少多个表。</p>
+    <div class="post-body" itemprop="articleBody"><p>在使用 Oracle 数据库时，发现导出的 DMP 文件，数据库结构不完整。缺少多个表。</p>
 <span id="more"></span>
 
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>由于工作原因，使用了Oracle数据库，在用exp命令导出一个用户下的所有对象后，再做imp导入，发现表少了很多。在网上查了一下资料，发现是因为11g版本的新特性，当表中无数据时，不分配segment(段:数据库对象使用的空间)，以节省空间。在使用exp命令导出时，没有segment的表不会被导出。</p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>由于工作原因，使用了 Oracle 数据库，在用 exp 命令导出一个用户下的所有对象后，再做 imp 导入，发现表少了很多。在网上查了一下资料，发现是因为 11g 版本的新特性，当表中无数据时，不分配 segment(段：数据库对象使用的空间)，以节省空间。在使用 exp 命令导出时，没有 segment 的表不会被导出。</p>
 <h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>从网上找到的资料来看，有三种解决方式。</p>
 <ol>
-<li><p>使用insert语句插入一行数据，再使用rollback或delete，清掉数据。此时就已经分配了segment，即可正常导出。</p>
+<li><p>使用 insert 语句插入一行数据，再使用 rollback 或 delete，清掉数据。此时就已经分配了 segment，即可正常导出。</p>
 </li>
-<li><p>使用expdp和impdp命令，在Oracle Database 10g及以后的版本中，都包含了这两个工具。（这个方法略有些麻烦。就不展开说明了）</p>
+<li><p>使用 expdp 和 impdp 命令，在 Oracle Database 10g 及以后的版本中，都包含了这两个工具。（这个方法略有些麻烦。就不展开说明了）</p>
 </li>
-<li><p>使用alter语句对现有空表进行segment的分配</p>
+<li><p>使用 alter 语句对现有空表进行 segment 的分配</p>
 <ul>
 <li>第一句是查询当前用户下所有的空表表名。</li>
-<li>第二句是将查询出来的表名组成一条alter语句。</li>
+<li>第二句是将查询出来的表名组成一条 alter 语句。</li>
 <li>将组合出来的语句，依次执行即可导出空表。</li>
 </ul>
 <blockquote>
-<p>可以使用数据库工具将组合出来的语句的结果保存为<code>.sql</code>之类的可以编辑的文件，然后使用编辑器，批量替换或删除多余语句。复制到SQL语句窗口或数据库命令行窗口执行即可。语句例如：<code>alter table users allocate extent;</code></p>
+<p>可以使用数据库工具将组合出来的语句的结果保存为<code>.sql</code>之类的可以编辑的文件，然后使用编辑器，批量替换或删除多余语句。复制到 SQL 语句窗口或数据库命令行窗口执行即可。语句例如：<code>alter table users allocate extent;</code></p>
 </blockquote>
 </li>
 </ol>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SELECT table_name FROM USER_TABLES WHERE NUM_ROWS=0;</span><br><span class="line">SELECT &#x27;alter table &#x27;||table_name||&#x27; allocate extent;&#x27; FROM USER_TABLES WHERE NUM_ROWS=0;</span><br></pre></td></tr></table></figure>
 
-<p>禁用Oracle Database 11g的空表不分配segment的功能，执行以下语句：</p>
+<p>禁用 Oracle Database 11g 的空表不分配 segment 的功能，执行以下语句：</p>
 <blockquote>
 <p>该功能禁用后，仅对禁用之后新建的表，或导入的表有用。</p>
 </blockquote>
@@ -288,7 +268,7 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show parameter deferred_segment_creation</span><br></pre></td></tr></table></figure>
 
 <h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
-<li>Oracle 11G R2 用exp无法导出空表解决方法及expdp和impdp的用法 <a target="_blank" rel="noopener" href="http://wenku.baidu.com/view/7beb56f57c1cfad6195fa702.html">http://wenku.baidu.com/view/7beb56f57c1cfad6195fa702.html</a></li>
+<li><a target="_blank" rel="noopener" href="http://wenku.baidu.com/view/7beb56f57c1cfad6195fa702.html">Oracle 11G R2 用 exp 无法导出空表解决方法及 expdp 和 impdp 的用法</a></li>
 </ul>
 
     </div>
@@ -317,7 +297,6 @@
 
           <div class="post-tags">
               <a href="/tags/Oracle-Database/" rel="tag"># Oracle Database</a>
-              <a href="/tags/Oracle/" rel="tag"># Oracle</a>
           </div>
 
         

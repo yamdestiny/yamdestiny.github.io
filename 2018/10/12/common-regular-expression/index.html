@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha256-5eIC48iZUHmSlSUz9XtjRyK2mzQkHScZY1WdMaoz74E=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"yamdestiny.xyz","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.21.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqus","storage":true,"lazyload":true,"nav":null,"activeClass":"disqus"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"yamdestiny.xyz","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.21.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"hide","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqus","storage":true,"lazyload":true,"nav":null,"activeClass":"disqus"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="平时不常写正则表达式，记录一些常用的，不用再花时间写或是到处找">
 <meta property="og:type" content="article">
@@ -28,9 +28,9 @@
 <meta property="og:description" content="平时不常写正则表达式，记录一些常用的，不用再花时间写或是到处找">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2018-10-12T13:06:50.000Z">
-<meta property="article:modified_time" content="2024-11-07T15:07:47.209Z">
+<meta property="article:modified_time" content="2024-11-11T08:42:41.716Z">
 <meta property="article:author" content="Maple">
-<meta property="article:tag" content="Regular expression">
+<meta property="article:tag" content="Programming">
 <meta name="twitter:card" content="summary">
 
 
@@ -82,6 +82,7 @@
       <p class="site-title">Maple Story</p>
       <i class="logo-line"></i>
     </a>
+      <p class="site-subtitle" itemprop="description">Welcome to Maple Story 🍁</p>
   </div>
 
   <div class="site-nav-right">
@@ -118,7 +119,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E5%AD%97"><span class="nav-number">1.</span> <span class="nav-text">数字</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B4%E6%95%B0"><span class="nav-number">1.1.</span> <span class="nav-text">整数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%AE%E7%82%B9%E6%95%B0"><span class="nav-number">1.2.</span> <span class="nav-text">浮点数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6"><span class="nav-number">2.</span> <span class="nav-text">字符</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%AD%E6%96%87%E5%AD%97%E7%AC%A6"><span class="nav-number">2.1.</span> <span class="nav-text">中文字符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%8B%B1%E6%96%87%E5%AD%97%E7%AC%A6"><span class="nav-number">2.2.</span> <span class="nav-text">英文字符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%8B%B1%E6%96%87%E5%92%8C%E6%95%B0%E5%AD%97"><span class="nav-number">2.3.</span> <span class="nav-text">英文和数字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A9%BA%E7%99%BD%E8%A1%8C"><span class="nav-number">2.4.</span> <span class="nav-text">空白行</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%89%B9%E6%AE%8A%E6%A0%BC%E5%BC%8F"><span class="nav-number">3.</span> <span class="nav-text">特殊格式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Email"><span class="nav-number">3.1.</span> <span class="nav-text">Email</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#URL"><span class="nav-number">3.2.</span> <span class="nav-text">URL</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%8B%E6%9C%BA%E5%8F%B7"><span class="nav-number">3.3.</span> <span class="nav-text">手机号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BA%AB%E4%BB%BD%E8%AF%81%E5%8F%B7"><span class="nav-number">3.4.</span> <span class="nav-text">身份证号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B4%A6%E5%8F%B7"><span class="nav-number">3.5.</span> <span class="nav-text">账号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%86%E7%A0%81"><span class="nav-number">3.6.</span> <span class="nav-text">密码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%A5%E6%9C%9F"><span class="nav-number">3.7.</span> <span class="nav-text">日期</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%87%91%E9%A2%9D"><span class="nav-number">3.8.</span> <span class="nav-text">金额</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IP%E5%9C%B0%E5%9D%80"><span class="nav-number">3.9.</span> <span class="nav-text">IP地址</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="nav-number">4.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E5%AD%97"><span class="nav-number">1.</span> <span class="nav-text">数字</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B4%E6%95%B0"><span class="nav-number">1.1.</span> <span class="nav-text">整数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%AE%E7%82%B9%E6%95%B0"><span class="nav-number">1.2.</span> <span class="nav-text">浮点数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6"><span class="nav-number">2.</span> <span class="nav-text">字符</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%AD%E6%96%87%E5%AD%97%E7%AC%A6"><span class="nav-number">2.1.</span> <span class="nav-text">中文字符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%8B%B1%E6%96%87%E5%AD%97%E7%AC%A6"><span class="nav-number">2.2.</span> <span class="nav-text">英文字符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%8B%B1%E6%96%87%E5%92%8C%E6%95%B0%E5%AD%97"><span class="nav-number">2.3.</span> <span class="nav-text">英文和数字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A9%BA%E7%99%BD%E8%A1%8C"><span class="nav-number">2.4.</span> <span class="nav-text">空白行</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%89%B9%E6%AE%8A%E6%A0%BC%E5%BC%8F"><span class="nav-number">3.</span> <span class="nav-text">特殊格式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Email"><span class="nav-number">3.1.</span> <span class="nav-text">Email</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#URL"><span class="nav-number">3.2.</span> <span class="nav-text">URL</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%8B%E6%9C%BA%E5%8F%B7"><span class="nav-number">3.3.</span> <span class="nav-text">手机号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BA%AB%E4%BB%BD%E8%AF%81%E5%8F%B7"><span class="nav-number">3.4.</span> <span class="nav-text">身份证号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B4%A6%E5%8F%B7"><span class="nav-number">3.5.</span> <span class="nav-text">账号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%86%E7%A0%81"><span class="nav-number">3.6.</span> <span class="nav-text">密码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%A5%E6%9C%9F"><span class="nav-number">3.7.</span> <span class="nav-text">日期</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%87%91%E9%A2%9D"><span class="nav-number">3.8.</span> <span class="nav-text">金额</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IP-%E5%9C%B0%E5%9D%80"><span class="nav-number">3.9.</span> <span class="nav-text">IP 地址</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="nav-number">4.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -127,7 +128,7 @@
     <img class="site-author-image" itemprop="image" alt="Maple"
       src="https://p3.music.126.net/Am30CzvY9NTxy1xiz5k3GQ==/7729566744520405.jpg?param=170y170">
   <p class="site-author-name" itemprop="name">Maple</p>
-  <div class="site-description" itemprop="description">以铜为镜，可以正衣冠；<br />以史为镜，可以知兴替；<br />以人为镜，可以明得失。</div>
+  <div class="site-description" itemprop="description">coding trainee</div>
 </div>
 <div class="site-state-wrap animated">
   <nav class="site-state">
@@ -139,12 +140,12 @@
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">48</span>
+        <span class="site-state-item-count">34</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -188,7 +189,7 @@
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Maple Story">
-      <meta itemprop="description" content="以铜为镜，可以正衣冠；<br />以史为镜，可以知兴替；<br />以人为镜，可以明得失。">
+      <meta itemprop="description" content="coding trainee">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
@@ -209,26 +210,6 @@
       <span class="post-meta-item-text">发表于</span>
 
       <time title="创建时间：2018-10-12 21:06:50" itemprop="dateCreated datePublished" datetime="2018-10-12T21:06:50+08:00">2018-10-12</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-11-07 23:07:47" itemprop="dateModified" datetime="2024-11-07T23:07:47+08:00">2024-11-07</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/coder/" itemprop="url" rel="index"><span itemprop="name">coder</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/coder/basics/" itemprop="url" rel="index"><span itemprop="name">basics</span></a>
-        </span>
     </span>
 
   
@@ -287,27 +268,27 @@
 <li>泛解析  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">^([1][3,4,5,6,7,8,9])\d&#123;9&#125;$)</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h3 id="身份证号"><a href="#身份证号" class="headerlink" title="身份证号"></a>身份证号</h3><ul>
-<li>18位  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">^(\d&#123;6&#125;)(\d&#123;4&#125;)(\d&#123;2&#125;)(\d&#123;2&#125;)(\d&#123;3&#125;)([0-9]|X)$</span><br></pre></td></tr></table></figure></li>
+<li>18 位  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">^(\d&#123;6&#125;)(\d&#123;4&#125;)(\d&#123;2&#125;)(\d&#123;2&#125;)(\d&#123;3&#125;)([0-9]|X)$</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h3 id="账号"><a href="#账号" class="headerlink" title="账号"></a>账号</h3><ul>
-<li>字母开头，允许5-16字节，允许字母数字下划线  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">^[a-zA-Z][a-zA-Z0-9_]&#123;4,15&#125;$</span><br></pre></td></tr></table></figure></li>
+<li>字母开头，允许 5-16 字节，允许字母数字下划线  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">^[a-zA-Z][a-zA-Z0-9_]&#123;4,15&#125;$</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h3 id="密码"><a href="#密码" class="headerlink" title="密码"></a>密码</h3><ul>
-<li>以字母开头，长度在6~18之间，只能包含字母、数字和下划线  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">^[a-zA-Z]\w&#123;5,17&#125;$</span><br></pre></td></tr></table></figure></li>
-<li>必须包含大小写字母和数字的组合，不能使用特殊字符，长度在8-10之间  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[\da-zA-Z]&#123;8,10&#125;$</span><br></pre></td></tr></table></figure></li>
+<li>以字母开头，长度在 6~18 之间，只能包含字母、数字和下划线  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">^[a-zA-Z]\w&#123;5,17&#125;$</span><br></pre></td></tr></table></figure></li>
+<li>必须包含大小写字母和数字的组合，不能使用特殊字符，长度在 8-10 之间  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[\da-zA-Z]&#123;8,10&#125;$</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h3 id="日期"><a href="#日期" class="headerlink" title="日期"></a>日期</h3><ul>
-<li>年-月-日  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">([0-9]&#123;3&#125;[1-9]|[0-9]&#123;2&#125;[1-9][0-9]&#123;1&#125;|[0-9]&#123;1&#125;[1-9][0-9]&#123;2&#125;|[1-9][0-9]&#123;3&#125;)-(((0[13578]|1[02])-(0[1-9]|[12][0-9]|3[01]))|((0[469]|11)-(0[1-9]|[12][0-9]|30))|(02-(0[1-9]|[1][0-9]|2[0-8])))</span><br></pre></td></tr></table></figure></li>
+<li>年 - 月 - 日  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">([0-9]&#123;3&#125;[1-9]|[0-9]&#123;2&#125;[1-9][0-9]&#123;1&#125;|[0-9]&#123;1&#125;[1-9][0-9]&#123;2&#125;|[1-9][0-9]&#123;3&#125;)-(((0[13578]|1[02])-(0[1-9]|[12][0-9]|3[01]))|((0[469]|11)-(0[1-9]|[12][0-9]|30))|(02-(0[1-9]|[1][0-9]|2[0-8])))</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h3 id="金额"><a href="#金额" class="headerlink" title="金额"></a>金额</h3><ul>
 <li>0.01, 10000.00  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(^[1-9]([0-9]+)?(\.[0-9]&#123;1,2&#125;)?$)|(^(0)&#123;1&#125;$)|(^[0-9]\.[0-9]([0-9])?$)</span><br></pre></td></tr></table></figure></li>
 </ul>
-<h3 id="IP地址"><a href="#IP地址" class="headerlink" title="IP地址"></a>IP地址</h3><ul>
+<h3 id="IP-地址"><a href="#IP-地址" class="headerlink" title="IP 地址"></a>IP 地址</h3><ul>
 <li>1  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\d+\.\d+\.\d+\.\d+</span><br></pre></td></tr></table></figure></li>
 <li>2  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">((?:(?:25[0-5]|2[0-4]\\d|[01]?\\d?\\d)\\.)&#123;3&#125;(?:25[0-5]|2[0-4]\\d|[01]?\\d?\\d))</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ul>
-<li><a target="_blank" rel="noopener" href="http://www.cnblogs.com/xumanbu/p/5019474.html">完美版js金钱正则表达式校验</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.cnblogs.com/xumanbu/p/5019474.html">完美版 js 金钱正则表达式校验</a></li>
 <li><a target="_blank" rel="noopener" href="http://tool.oschina.net/regex">开源中国 - 在线正则表达式测试</a></li>
 <li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/zxin/archive/2013/01/26/2877765.html">最全的常用正则表达式大全——包括校验数字、字符、一些特殊的需求等等</a></li>
 <li><a target="_blank" rel="noopener" href="https://www.w3cschool.cn/regexp/m2ez1pqk.html">常用正则表达式大全</a></li>
@@ -338,7 +319,7 @@
 </div>
 
           <div class="post-tags">
-              <a href="/tags/Regular-expression/" rel="tag"># Regular expression</a>
+              <a href="/tags/Programming/" rel="tag"># Programming</a>
           </div>
 
         

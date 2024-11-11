@@ -18,20 +18,19 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha256-5eIC48iZUHmSlSUz9XtjRyK2mzQkHScZY1WdMaoz74E=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"yamdestiny.xyz","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.21.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqus","storage":true,"lazyload":true,"nav":null,"activeClass":"disqus"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"yamdestiny.xyz","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.21.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"hide","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqus","storage":true,"lazyload":true,"nav":null,"activeClass":"disqus"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Oracle数据库导入与导出命令的简单使用">
+    <meta name="description" content="Oracle 数据库导入与导出命令的简单使用">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Oracle Database 11g 的 exp 与 imp 命令的用法">
 <meta property="og:url" content="https://yamdestiny.xyz/2017/02/14/Oracle-Database-exp&imp-Command-Usage/index.html">
 <meta property="og:site_name" content="Maple Story">
-<meta property="og:description" content="Oracle数据库导入与导出命令的简单使用">
+<meta property="og:description" content="Oracle 数据库导入与导出命令的简单使用">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2017-02-14T14:10:26.000Z">
-<meta property="article:modified_time" content="2024-11-10T13:22:38.293Z">
+<meta property="article:modified_time" content="2024-11-11T08:50:32.279Z">
 <meta property="article:author" content="Maple">
 <meta property="article:tag" content="Oracle Database">
-<meta property="article:tag" content="Oracle">
 <meta name="twitter:card" content="summary">
 
 
@@ -83,6 +82,7 @@
       <p class="site-title">Maple Story</p>
       <i class="logo-line"></i>
     </a>
+      <p class="site-subtitle" itemprop="description">Welcome to Maple Story 🍁</p>
   </div>
 
   <div class="site-nav-right">
@@ -128,7 +128,7 @@
     <img class="site-author-image" itemprop="image" alt="Maple"
       src="https://p3.music.126.net/Am30CzvY9NTxy1xiz5k3GQ==/7729566744520405.jpg?param=170y170">
   <p class="site-author-name" itemprop="name">Maple</p>
-  <div class="site-description" itemprop="description">以铜为镜，可以正衣冠；<br />以史为镜，可以知兴替；<br />以人为镜，可以明得失。</div>
+  <div class="site-description" itemprop="description">coding trainee</div>
 </div>
 <div class="site-state-wrap animated">
   <nav class="site-state">
@@ -140,12 +140,12 @@
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">48</span>
+        <span class="site-state-item-count">34</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -189,7 +189,7 @@
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Maple Story">
-      <meta itemprop="description" content="以铜为镜，可以正衣冠；<br />以史为镜，可以知兴替；<br />以人为镜，可以明得失。">
+      <meta itemprop="description" content="coding trainee">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
@@ -210,26 +210,6 @@
       <span class="post-meta-item-text">发表于</span>
 
       <time title="创建时间：2017-02-14 22:10:26" itemprop="dateCreated datePublished" datetime="2017-02-14T22:10:26+08:00">2017-02-14</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-11-10 21:22:38" itemprop="dateModified" datetime="2024-11-10T21:22:38+08:00">2024-11-10</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/coder/" itemprop="url" rel="index"><span itemprop="name">coder</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/coder/Practice/" itemprop="url" rel="index"><span itemprop="name">Practice</span></a>
-        </span>
     </span>
 
   
@@ -255,12 +235,18 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>Oracle数据库导入与导出命令的简单使用</p>
+    <div class="post-body" itemprop="articleBody"><p>Oracle 数据库导入与导出命令的简单使用</p>
 <span id="more"></span>
 
-<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p><code>exp</code>即export，导出。<br /><br><code>imp</code>即import，导入。</p>
+<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p><code>exp</code>即 export，导出。</p>
+<p><code>imp</code>即 import，导入。</p>
 <h2 id="简单使用"><a href="#简单使用" class="headerlink" title="简单使用"></a>简单使用</h2><blockquote>
-<p>命令与参数简析<br /><br><code>imp</code> or <code>exp</code>导入导出命令<br /><br><code>test/test</code>导出使用的用户&#x2F;密码<br /><br><code>@orcl</code>需要导出的库<br /><br><code>buffer=64000</code>数据缓存区，默认4096。越大导出速度越快，具体视计算机物理内存大小而定，据网上看到的资料，<code>exp</code>&gt;64000，<code>imp</code>&gt;102400，单位 Byte(字节)<br /><br><code>FILE=C:\test\test.dmp</code>导入导出的路径及文件名<br /></p>
+<p>命令与参数简析</p>
+<p><code>imp</code> or <code>exp</code>导入导出命令</p>
+<p><code>test/test</code>导出使用的用户&#x2F;密码</p>
+<p><code>@orcl</code>需要导出的库</p>
+<p><code>buffer=64000</code>数据缓存区，默认 4096。越大导出速度越快，具体视计算机物理内存大小而定，据网上看到的资料，<code>exp</code>&gt;64000，<code>imp</code>&gt;102400，单位 Byte(字节)</p>
+<p><code>FILE=C:\test\test.dmp</code>导入导出的路径及文件名</p>
 </blockquote>
 <ol>
 <li><p><code>imp</code>命令的使用</p>
@@ -282,7 +268,7 @@
 </li>
 </ol>
 <h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h2><ul>
-<li><p>导出时会报<code>EXP-00091</code>的错误信息，该错误的原因是因为客户端字符集或NCHARSET参数和服务器端不一致导致一些统计信息不可用。无特殊需要，可以不用在意，确保导入和导出的服务器端的字符集一致即可。如果需要完整信息，使用以下方式修改字符集：</p>
+<li><p>导出时会报<code>EXP-00091</code>的错误信息，该错误的原因是因为客户端字符集或 NCHARSET 参数和服务器端不一致导致一些统计信息不可用。无特殊需要，可以不用在意，确保导入和导出的服务器端的字符集一致即可。如果需要完整信息，使用以下方式修改字符集：</p>
 <ul>
 <li><code>select userenv(&#39;language&#39;) from dual;</code>查询服务器的字符集</li>
 <li><code>AMERICAN_AMERICA.AL32UTF8</code>为服务器的字符集</li>
@@ -318,7 +304,6 @@
 
           <div class="post-tags">
               <a href="/tags/Oracle-Database/" rel="tag"># Oracle Database</a>
-              <a href="/tags/Oracle/" rel="tag"># Oracle</a>
           </div>
 
         
@@ -330,8 +315,8 @@
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2017/02/17/macOS-Environment-Variable-Configuration/" rel="next" title="macOS 环境变量配置">
-                  macOS 环境变量配置 <i class="fa fa-angle-right"></i>
+                <a href="/2017/02/17/macOS-Environment-Variable-Configuration/" rel="next" title="macOS bash 环境变量配置">
+                  macOS bash 环境变量配置 <i class="fa fa-angle-right"></i>
                 </a>
             </div>
           </div>

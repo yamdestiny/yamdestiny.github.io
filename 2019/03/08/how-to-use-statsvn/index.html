@@ -18,23 +18,20 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha256-5eIC48iZUHmSlSUz9XtjRyK2mzQkHScZY1WdMaoz74E=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"yamdestiny.xyz","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.21.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqus","storage":true,"lazyload":true,"nav":null,"activeClass":"disqus"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"yamdestiny.xyz","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.21.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"hide","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqus","storage":true,"lazyload":true,"nav":null,"activeClass":"disqus"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="再也不想抄自己的代码了">
+    <meta name="description" content="统计 SVN 提交记录。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何使用 StatSVN">
 <meta property="og:url" content="https://yamdestiny.xyz/2019/03/08/how-to-use-statsvn/index.html">
 <meta property="og:site_name" content="Maple Story">
-<meta property="og:description" content="再也不想抄自己的代码了">
+<meta property="og:description" content="统计 SVN 提交记录。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2019-03-08T13:38:38.000Z">
-<meta property="article:modified_time" content="2024-11-07T05:04:30.335Z">
+<meta property="article:modified_time" content="2024-11-11T08:41:55.491Z">
 <meta property="article:author" content="Maple">
-<meta property="article:tag" content="Java">
-<meta property="article:tag" content="Apache Subversion">
-<meta property="article:tag" content="Statistics">
-<meta property="article:tag" content="Report">
 <meta property="article:tag" content="Tool">
+<meta property="article:tag" content="Apache Subversion">
 <meta name="twitter:card" content="summary">
 
 
@@ -86,6 +83,7 @@
       <p class="site-title">Maple Story</p>
       <i class="logo-line"></i>
     </a>
+      <p class="site-subtitle" itemprop="description">Welcome to Maple Story 🍁</p>
   </div>
 
   <div class="site-nav-right">
@@ -131,7 +129,7 @@
     <img class="site-author-image" itemprop="image" alt="Maple"
       src="https://p3.music.126.net/Am30CzvY9NTxy1xiz5k3GQ==/7729566744520405.jpg?param=170y170">
   <p class="site-author-name" itemprop="name">Maple</p>
-  <div class="site-description" itemprop="description">以铜为镜，可以正衣冠；<br />以史为镜，可以知兴替；<br />以人为镜，可以明得失。</div>
+  <div class="site-description" itemprop="description">coding trainee</div>
 </div>
 <div class="site-state-wrap animated">
   <nav class="site-state">
@@ -143,12 +141,12 @@
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">48</span>
+        <span class="site-state-item-count">34</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -192,7 +190,7 @@
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Maple Story">
-      <meta itemprop="description" content="以铜为镜，可以正衣冠；<br />以史为镜，可以知兴替；<br />以人为镜，可以明得失。">
+      <meta itemprop="description" content="coding trainee">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
@@ -213,26 +211,6 @@
       <span class="post-meta-item-text">发表于</span>
 
       <time title="创建时间：2019-03-08 21:38:38" itemprop="dateCreated datePublished" datetime="2019-03-08T21:38:38+08:00">2019-03-08</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-11-07 13:04:30" itemprop="dateModified" datetime="2024-11-07T13:04:30+08:00">2024-11-07</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/coder/" itemprop="url" rel="index"><span itemprop="name">coder</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/coder/Tool/" itemprop="url" rel="index"><span itemprop="name">Tool</span></a>
-        </span>
     </span>
 
   
@@ -258,7 +236,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>再也不想抄自己的代码了</p>
+    <div class="post-body" itemprop="articleBody"><p>统计 SVN 提交记录。</p>
 <span id="more"></span>
 
 <p>最近，因为不可描述的原因，抄了两天自己的代码，手都要码断了。感觉自己码了上万行，不计其数的字符。为了看看最终的记录是多少，于是有了这篇为了获取 SVN 统计数据的 StatSVN 工具使用说明。</p>
@@ -272,11 +250,11 @@
 <li>目录大小</li>
 <li>…</li>
 </ul>
-<p>截止目前，最后一个Release版本：<code>2010-01-01: release of 0.7.0 is released</code></p>
-<h2 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h2><p>因为 StatSVN 是开源的且托管在 SourceForge，所以可以很轻易的从 SourceForge 获取 <a target="_blank" rel="noopener" href="https://sourceforge.net/projects/svnstat/">StatSVN</a> 的最新Release版本 和 <a target="_blank" rel="noopener" href="https://sourceforge.net/p/svnstat/code/HEAD/tree/">源码</a> 自己编译。</p>
+<p>截止目前，最后一个 Release 版本：<code>2010-01-01: release of 0.7.0 is released</code></p>
+<h2 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h2><p>因为 StatSVN 是开源的且托管在 SourceForge，所以可以很轻易的从 SourceForge 获取 <a target="_blank" rel="noopener" href="https://sourceforge.net/projects/svnstat/">StatSVN</a> 的最新 Release 版本 和 <a target="_blank" rel="noopener" href="https://sourceforge.net/p/svnstat/code/HEAD/tree/">源码</a> 自己编译。</p>
 <h3 id="先决条件"><a href="#先决条件" class="headerlink" title="先决条件"></a>先决条件</h3><ul>
 <li>Java: 1.4 或更高版本</li>
-<li>Subversion command-line client: SVN 的命令行客户端， 1.3 或更高版本</li>
+<li>Subversion command-line client: SVN 的命令行客户端，1.3 或更高版本</li>
 </ul>
 <h3 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h3><ol>
 <li>checkout 需要统计的项目</li>
@@ -330,10 +308,10 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 生成 ./statsvn-code/statsvn/dist/statsvn.jar</span><br><span class="line">$ sh ant -buildfile ./statsvn-code/statsvn/build.xml dist</span><br><span class="line">// 生成 statsvn.jar，发布文件，javadoc等</span><br><span class="line">$ sh ant -buildfile ./statsvn-code/statsvn/build.xml release</span><br></pre></td></tr></table></figure>
 
 <p>其余可用命令查看 <code>./statsvn-code/statsvn/build.xml</code></p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>使用该工具可以很快速的统计出整个项目的代码开发情况，可以将当前SVN库的状态用图表的方式展现，直观方便。但是 StatSVN 统计的是所有的行，包括注释和空行，不仅是有效代码行，且不计算修改的代码行，只计算新增或删除的代码行数，比较局限。在我看来，仅有纪念意义，无其它的实际意义。要考察代码质量，推荐使用 SonarQube 等工具。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>使用该工具可以很快速的统计出整个项目的代码开发情况，可以将当前 SVN 库的状态用图表的方式展现，直观方便。但是 StatSVN 统计的是所有的行，包括注释和空行，不仅是有效代码行，且不计算修改的代码行，只计算新增或删除的代码行数，比较局限。在我看来，仅有纪念意义，无其它的实际意义。要考察代码质量，推荐使用 SonarQube 等工具。</p>
 <h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/honghailiang888/article/details/51451584">svn代码量统计工具StatSVN的使用</a></li>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_37023538/article/details/53930599">svn代码统计生成详细html报告</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/honghailiang888/article/details/51451584">svn 代码量统计工具 StatSVN 的使用</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_37023538/article/details/53930599">svn 代码统计生成详细 html 报告</a></li>
 <li><a target="_blank" rel="noopener" href="https://wiki.statsvn.org/User%20Manual.ashx?AspxAutoDetectCookieSupport=1">StatSVN User Manual</a></li>
 <li><a target="_blank" rel="noopener" href="https://www.shayanderson.com/linux/how-to-use-statsvn-to-monitor-developer-commits-and-lines-of-code.htm">How to use StatSVN to Monitor Developer Commits and Lines of Code</a></li>
 </ul>
@@ -363,11 +341,8 @@
 </div>
 
           <div class="post-tags">
-              <a href="/tags/Java/" rel="tag"># Java</a>
-              <a href="/tags/Apache-Subversion/" rel="tag"># Apache Subversion</a>
-              <a href="/tags/Statistics/" rel="tag"># Statistics</a>
-              <a href="/tags/Report/" rel="tag"># Report</a>
               <a href="/tags/Tool/" rel="tag"># Tool</a>
+              <a href="/tags/Apache-Subversion/" rel="tag"># Apache Subversion</a>
           </div>
 
         

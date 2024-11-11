@@ -18,17 +18,17 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha256-5eIC48iZUHmSlSUz9XtjRyK2mzQkHScZY1WdMaoz74E=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"yamdestiny.xyz","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.21.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqus","storage":true,"lazyload":true,"nav":null,"activeClass":"disqus"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"yamdestiny.xyz","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.21.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"hide","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqus","storage":true,"lazyload":true,"nav":null,"activeClass":"disqus"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Java Throwable从概念上区分为受检异常（Checked Exception）、非受检异常（Unchecked Exception）。 Java Throwable从类上分为两个大类，Error和Exception（RuntimeException）。  受检异常：Exception 非受检异常：Error和RuntimeException">
+    <meta name="description" content="Java Throwable 从概念上区分为受检异常（Checked Exception）、非受检异常（Unchecked Exception）。 Java Throwable 从类上分为两个大类，Error 和 Exception（RuntimeException）。  受检异常：Exception 非受检异常：Error 和 RuntimeException">
 <meta property="og:type" content="article">
 <meta property="og:title" content="java.lang.Throwable">
 <meta property="og:url" content="https://yamdestiny.xyz/2018/02/07/java-lang-Throwable/index.html">
 <meta property="og:site_name" content="Maple Story">
-<meta property="og:description" content="Java Throwable从概念上区分为受检异常（Checked Exception）、非受检异常（Unchecked Exception）。 Java Throwable从类上分为两个大类，Error和Exception（RuntimeException）。  受检异常：Exception 非受检异常：Error和RuntimeException">
+<meta property="og:description" content="Java Throwable 从概念上区分为受检异常（Checked Exception）、非受检异常（Unchecked Exception）。 Java Throwable 从类上分为两个大类，Error 和 Exception（RuntimeException）。  受检异常：Exception 非受检异常：Error 和 RuntimeException">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2018-02-07T11:26:37.000Z">
-<meta property="article:modified_time" content="2024-11-07T05:04:30.982Z">
+<meta property="article:modified_time" content="2024-11-11T08:41:46.130Z">
 <meta property="article:author" content="Maple">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
@@ -82,6 +82,7 @@
       <p class="site-title">Maple Story</p>
       <i class="logo-line"></i>
     </a>
+      <p class="site-subtitle" itemprop="description">Welcome to Maple Story 🍁</p>
   </div>
 
   <div class="site-nav-right">
@@ -127,7 +128,7 @@
     <img class="site-author-image" itemprop="image" alt="Maple"
       src="https://p3.music.126.net/Am30CzvY9NTxy1xiz5k3GQ==/7729566744520405.jpg?param=170y170">
   <p class="site-author-name" itemprop="name">Maple</p>
-  <div class="site-description" itemprop="description">以铜为镜，可以正衣冠；<br />以史为镜，可以知兴替；<br />以人为镜，可以明得失。</div>
+  <div class="site-description" itemprop="description">coding trainee</div>
 </div>
 <div class="site-state-wrap animated">
   <nav class="site-state">
@@ -139,12 +140,12 @@
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">48</span>
+        <span class="site-state-item-count">34</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -188,7 +189,7 @@
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Maple Story">
-      <meta itemprop="description" content="以铜为镜，可以正衣冠；<br />以史为镜，可以知兴替；<br />以人为镜，可以明得失。">
+      <meta itemprop="description" content="coding trainee">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
@@ -209,26 +210,6 @@
       <span class="post-meta-item-text">发表于</span>
 
       <time title="创建时间：2018-02-07 19:26:37" itemprop="dateCreated datePublished" datetime="2018-02-07T19:26:37+08:00">2018-02-07</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-11-07 13:04:30" itemprop="dateModified" datetime="2024-11-07T13:04:30+08:00">2024-11-07</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/coder/" itemprop="url" rel="index"><span itemprop="name">coder</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/coder/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a>
-        </span>
     </span>
 
   
@@ -254,19 +235,19 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>Java Throwable从概念上区分为受检异常（Checked Exception）、非受检异常（Unchecked Exception）。</p>
-<p>Java Throwable从类上分为两个大类，Error和Exception（RuntimeException）。</p>
+    <div class="post-body" itemprop="articleBody"><p>Java Throwable 从概念上区分为受检异常（Checked Exception）、非受检异常（Unchecked Exception）。</p>
+<p>Java Throwable 从类上分为两个大类，Error 和 Exception（RuntimeException）。</p>
 <ul>
 <li>受检异常：Exception</li>
-<li>非受检异常：Error和RuntimeException</li>
+<li>非受检异常：Error 和 RuntimeException</li>
 </ul>
 <span id="more"></span>
 
-<h2 id="Subclass"><a href="#Subclass" class="headerlink" title="Subclass"></a>Subclass</h2><h3 id="Error"><a href="#Error" class="headerlink" title="Error"></a>Error</h3><p>Error类一般是指与虚拟机相关的问题，如系统崩溃，虚拟机错误，内存空间不足，方法调用栈溢出等。<br>常见如<code>java.lang.StackOverFlowError</code>、<code>Java.lang.OutOfMemoryError</code></p>
+<h2 id="Subclass"><a href="#Subclass" class="headerlink" title="Subclass"></a>Subclass</h2><h3 id="Error"><a href="#Error" class="headerlink" title="Error"></a>Error</h3><p>Error 类一般是指与虚拟机相关的问题，如系统崩溃，虚拟机错误，内存空间不足，方法调用栈溢出等。<br>常见如<code>java.lang.StackOverFlowError</code>、<code>Java.lang.OutOfMemoryError</code></p>
 <p>遇到此类异常靠程序是无法处理和避免的。</p>
 <h3 id="Exception"><a href="#Exception" class="headerlink" title="Exception"></a>Exception</h3><ul>
 <li>受检异常（Checked Exception）<br>  在编译期就会去检查的异常，表示这段代码可能会出现错误，需要<code>try&#123;&#125;catch&#123;&#125;</code>去捕获异常，或通过<code>throws</code>抛给上层调用方法，让上层方法处理。</li>
-<li>运行时异常（Runtime Exception）<br>  通常遇到这种异常，就代表程序有BUG了。该种异常编译器不会去检查，即使没有使用<code>try&#123;&#125;catch&#123;&#125;</code>捕获，也没有使用<code>throws</code>去抛出异常，都不会影响编译，运行时正常提示异常中断程序。<br>  常见如：<code>java.lang.NullPointerException</code>、<code>java.lang.ClassNotFoundException</code>、<code>java.lang.ArithmeticException</code>、<code>java.lang.ArrayIndexOutOfBoundsException</code></li>
+<li>运行时异常（Runtime Exception）<br>  通常遇到这种异常，就代表程序有 BUG 了。该种异常编译器不会去检查，即使没有使用<code>try&#123;&#125;catch&#123;&#125;</code>捕获，也没有使用<code>throws</code>去抛出异常，都不会影响编译，运行时正常提示异常中断程序。<br>  常见如：<code>java.lang.NullPointerException</code>、<code>java.lang.ClassNotFoundException</code>、<code>java.lang.ArithmeticException</code>、<code>java.lang.ArrayIndexOutOfBoundsException</code></li>
 </ul>
 <h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><h3 id="Throwable"><a href="#Throwable" class="headerlink" title="Throwable"></a>Throwable</h3><h4 id="Variable"><a href="#Variable" class="headerlink" title="Variable"></a>Variable</h4><p><code>private String detailMessage;</code><br><code>private Throwable cause = this;</code></p>
 <h4 id="Construction-method"><a href="#Construction-method" class="headerlink" title="Construction method"></a>Construction method</h4><ul>
@@ -276,13 +257,13 @@
 <li><code>Throwable(Throwable cause)</code>，设置<code>detailMessage</code>为<code>cause.toString()</code>，设置<code>cause</code>为<code>cause</code></li>
 </ul>
 <h3 id="Exception-1"><a href="#Exception-1" class="headerlink" title="Exception"></a>Exception</h3><ul>
-<li><p>当每个Exception都抛出一个带Message的对象时，只会输出最后一个Exception信息</p>
+<li><p>当每个 Exception 都抛出一个带 Message 的对象时，只会输出最后一个 Exception 信息</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">Exception</span>(<span class="string">&quot;Test Exception 1&quot;</span>);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">Exception</span>(<span class="string">&quot;Test Exception 2&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">RuntimeException</span>(<span class="string">&quot;Test Exception 3&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>  控制台输出：</p>
   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Exception <span class="keyword">in</span> thread <span class="string">&quot;main&quot;</span> java.lang.RuntimeException: Test Exception 3</span><br><span class="line">    at test.classs.exception.ExceptionTest1.main(ExceptionTest1.java:13)</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>当多重嵌套时，会将每一个的Exception信息都打印出来</p>
+<li><p>当多重嵌套时，会将每一个的 Exception 信息都打印出来</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">Exception</span>(<span class="string">&quot;Test Exception 1&quot;</span>);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">Exception</span>(e);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;cause: &quot;</span> + e.getCause());</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">RuntimeException</span>(e);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>  控制台输出：</p>
@@ -326,8 +307,8 @@
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2018/03/04/Oracle-Database-Common-SQL/" rel="next" title="Oracle Database 常用SQL">
-                  Oracle Database 常用SQL <i class="fa fa-angle-right"></i>
+                <a href="/2018/03/04/Oracle-Database-Common-SQL/" rel="next" title="Oracle Database 常用 SQL">
+                  Oracle Database 常用 SQL <i class="fa fa-angle-right"></i>
                 </a>
             </div>
           </div>

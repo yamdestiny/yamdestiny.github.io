@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha256-5eIC48iZUHmSlSUz9XtjRyK2mzQkHScZY1WdMaoz74E=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"yamdestiny.xyz","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.21.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqus","storage":true,"lazyload":true,"nav":null,"activeClass":"disqus"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"yamdestiny.xyz","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.21.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"hide","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqus","storage":true,"lazyload":true,"nav":null,"activeClass":"disqus"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="Logback is intended as a successor to the popular log4j project, picking up where log4j leaves off.">
 <meta property="og:type" content="article">
@@ -28,11 +28,9 @@
 <meta property="og:description" content="Logback is intended as a successor to the popular log4j project, picking up where log4j leaves off.">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2018-09-05T11:28:52.000Z">
-<meta property="article:modified_time" content="2024-11-07T05:04:32.879Z">
+<meta property="article:modified_time" content="2024-11-11T08:45:50.251Z">
 <meta property="article:author" content="Maple">
 <meta property="article:tag" content="Java">
-<meta property="article:tag" content="Log">
-<meta property="article:tag" content="Logback">
 <meta name="twitter:card" content="summary">
 
 
@@ -84,6 +82,7 @@
       <p class="site-title">Maple Story</p>
       <i class="logo-line"></i>
     </a>
+      <p class="site-subtitle" itemprop="description">Welcome to Maple Story 🍁</p>
   </div>
 
   <div class="site-nav-right">
@@ -120,7 +119,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Logback%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-number">1.</span> <span class="nav-text">Logback是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%95%E5%85%A5Logback"><span class="nav-number">2.</span> <span class="nav-text">引入Logback</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8Logback"><span class="nav-number">3.</span> <span class="nav-text">使用Logback</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AELogback"><span class="nav-number">4.</span> <span class="nav-text">配置Logback</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-number">4.1.</span> <span class="nav-text">配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E5%88%B0%E6%96%87%E4%BB%B6"><span class="nav-number">4.2.</span> <span class="nav-text">输出到文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%E5%AD%90%E8%8A%82%E7%82%B9"><span class="nav-number">4.3.</span> <span class="nav-text">设置子节点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE%E7%A4%BA%E4%BE%8B%E5%8F%8A%E8%AF%B4%E6%98%8E"><span class="nav-number">5.</span> <span class="nav-text">常用配置示例及说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="nav-number">6.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Logback-%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-number">1.</span> <span class="nav-text">Logback 是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%95%E5%85%A5-Logback"><span class="nav-number">2.</span> <span class="nav-text">引入 Logback</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-Logback"><span class="nav-number">3.</span> <span class="nav-text">使用 Logback</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE-Logback"><span class="nav-number">4.</span> <span class="nav-text">配置 Logback</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-number">4.1.</span> <span class="nav-text">配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E5%88%B0%E6%96%87%E4%BB%B6"><span class="nav-number">4.2.</span> <span class="nav-text">输出到文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%E5%AD%90%E8%8A%82%E7%82%B9"><span class="nav-number">4.3.</span> <span class="nav-text">设置子节点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE%E7%A4%BA%E4%BE%8B%E5%8F%8A%E8%AF%B4%E6%98%8E"><span class="nav-number">5.</span> <span class="nav-text">常用配置示例及说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="nav-number">6.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -129,7 +128,7 @@
     <img class="site-author-image" itemprop="image" alt="Maple"
       src="https://p3.music.126.net/Am30CzvY9NTxy1xiz5k3GQ==/7729566744520405.jpg?param=170y170">
   <p class="site-author-name" itemprop="name">Maple</p>
-  <div class="site-description" itemprop="description">以铜为镜，可以正衣冠；<br />以史为镜，可以知兴替；<br />以人为镜，可以明得失。</div>
+  <div class="site-description" itemprop="description">coding trainee</div>
 </div>
 <div class="site-state-wrap animated">
   <nav class="site-state">
@@ -141,12 +140,12 @@
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">48</span>
+        <span class="site-state-item-count">34</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -190,7 +189,7 @@
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Maple Story">
-      <meta itemprop="description" content="以铜为镜，可以正衣冠；<br />以史为镜，可以知兴替；<br />以人为镜，可以明得失。">
+      <meta itemprop="description" content="coding trainee">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
@@ -211,26 +210,6 @@
       <span class="post-meta-item-text">发表于</span>
 
       <time title="创建时间：2018-09-05 19:28:52" itemprop="dateCreated datePublished" datetime="2018-09-05T19:28:52+08:00">2018-09-05</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-11-07 13:04:32" itemprop="dateModified" datetime="2024-11-07T13:04:32+08:00">2024-11-07</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/coder/" itemprop="url" rel="index"><span itemprop="name">coder</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/coder/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a>
-        </span>
     </span>
 
   
@@ -259,25 +238,25 @@
     <div class="post-body" itemprop="articleBody"><p>Logback is intended as a successor to the popular log4j project, picking up where log4j leaves off.</p>
 <span id="more"></span>
 
-<h2 id="Logback是什么"><a href="#Logback是什么" class="headerlink" title="Logback是什么"></a>Logback是什么</h2><p><a target="_blank" rel="noopener" href="https://logback.qos.ch/">Logback</a> 是一个基于 Java 的日志记录工具。它是由 Log4j 的作者设计开发的又一个开源日志组件。意图将 Logback 打造为 Log4j 的继任者。</p>
+<h2 id="Logback-是什么"><a href="#Logback-是什么" class="headerlink" title="Logback 是什么"></a>Logback 是什么</h2><p><a target="_blank" rel="noopener" href="https://logback.qos.ch/">Logback</a> 是一个基于 Java 的日志记录工具。它是由 Log4j 的作者设计开发的又一个开源日志组件。意图将 Logback 打造为 Log4j 的继任者。</p>
 <p>目前 Logback 分为三个模块：logback-core，logback-classic 和 logback-access。</p>
 <ul>
 <li>logback-core 模块是其基础包</li>
 <li>logback-classic 模块是吸收了 Log4j 诸多优点的改进版本。在该模块中，实现了 SLF4J API 可以方便的更换成其他日志管理工具。</li>
-<li>logback-access 模块可与 Servlet 容器（如Tomcat、Jetty）集成，以提供HTTP访问日志的功能</li>
+<li>logback-access 模块可与 Servlet 容器（如 Tomcat、Jetty）集成，以提供 HTTP 访问日志的功能</li>
 </ul>
 <blockquote>
 <p><a target="_blank" rel="noopener" href="https://www.slf4j.org/">SLF4J (Simple Logging Facade for Java)</a> 与其他日志类库不同。SLF4J 不是真正的日志实现，而是抽象层，它允许你在后台使用任意一个实现了 SLF4J API 的日志类库。底层的日志记录是在运行时通过向类路径添加所需的绑定来确定的，可能是 Java Logging API（java.util.logging）, Log4j, Logback 或 tinylog。</p>
 </blockquote>
-<h2 id="引入Logback"><a href="#引入Logback" class="headerlink" title="引入Logback"></a>引入Logback</h2><p>使用Logback，至少需引入 logback-core、logback-classic 依赖包。</p>
+<h2 id="引入-Logback"><a href="#引入-Logback" class="headerlink" title="引入 Logback"></a>引入 Logback</h2><p>使用 Logback，至少需引入 logback-core、logback-classic 依赖包。</p>
 <p>但是通常来说，我们还会使用 slf4j-api 用于简化我们的使用或对未来的拓展。</p>
 <p>如使用 Maven，则可以在 <code>pom.xml</code> 文件中，通过添加以下 XML 引入。</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.slf4j<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>slf4j-api<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.7.25<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/ch.qos.logback/logback-core --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>ch.qos.logback<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>logback-core<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.2.3<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/ch.qos.logback/logback-classic --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>ch.qos.logback<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>logback-classic<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.2.3<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/ch.qos.logback/logback-access --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>ch.qos.logback<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>logback-access<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.2.3<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <blockquote>
-<p>也可以只引入 logback-classic 模块。Maven会自动引入 logback-core 和 slf4j-api 依赖包。</p>
+<p>也可以只引入 logback-classic 模块。Maven 会自动引入 logback-core 和 slf4j-api 依赖包。</p>
 </blockquote>
-<h2 id="使用Logback"><a href="#使用Logback" class="headerlink" title="使用Logback"></a>使用Logback</h2><p>创建Java项目，引入依赖包。</p>
+<h2 id="使用-Logback"><a href="#使用-Logback" class="headerlink" title="使用 Logback"></a>使用 Logback</h2><p>创建 Java 项目，引入依赖包。</p>
 <p>新建类如下：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> xyz.yamdestiny.demo.logback;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.slf4j.Logger;</span><br><span class="line"><span class="keyword">import</span> org.slf4j.LoggerFactory;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">App</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">Logger</span> <span class="variable">logger</span> <span class="operator">=</span> LoggerFactory.getLogger(App.class);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        logger.trace(<span class="string">&quot;Hello World!&quot;</span>);</span><br><span class="line">        logger.debug(<span class="string">&quot;Hello World!&quot;</span>);</span><br><span class="line">        logger.info(<span class="string">&quot;Hello World!&quot;</span>);</span><br><span class="line">        logger.warn(<span class="string">&quot;Hello World!&quot;</span>);</span><br><span class="line">        logger.error(<span class="string">&quot;Hello World!&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -288,7 +267,7 @@
 <blockquote>
 <p>输出级别说明：<br>TRACE &lt; DEBUG &lt; INFO &lt; WARN &lt; ERROR &lt; OFF<br>当设置级别为 OFF 时，什么都不输出<br>当设置级别为 ERROR 时，只会输出 ERROR 级的消息<br>当设置级别为 WARN 时，会输出 WARN 和 ERROR 级的消息<br>INFO，DEBUG，TRACE 同理。<br>当设置级别为 TRACE 时，会输出所有级别的消息</p>
 </blockquote>
-<h2 id="配置Logback"><a href="#配置Logback" class="headerlink" title="配置Logback"></a>配置Logback</h2><p>虽然 Logback 有默认配置，但是要在项目中使用还是需要进行一些针对性的配置。</p>
+<h2 id="配置-Logback"><a href="#配置-Logback" class="headerlink" title="配置 Logback"></a>配置 Logback</h2><p>虽然 Logback 有默认配置，但是要在项目中使用还是需要进行一些针对性的配置。</p>
 <p>Logback 可以使用 编程的方式、XML 或 Groovy 格式表示的配置脚本来配置 Logback。</p>
 <p>Logback 配置初始化策略：</p>
 <ol>
@@ -297,8 +276,8 @@
 <li>如果未找到这些文件，则 Logback 会尝试在 <code>classpath</code> 中查找名为 <code>logback.xml</code> 的配置文件</li>
 <li>如果没有找到以上所列的配置文件，则 Logback 会使用在 JDK 1.6 中引入的 服务提供者加载工具（service-provider loading facility）通过在 <code>classpath</code> 中查找 <code>META-INF\services</code> 下实现了 <code>com.qos.logback.classic.spi.Configurator</code> 接口的<code>Configurator</code>类。</li>
 </ol>
-<p>如果以上配置初始化都不成功，那么 Logback 将使用 <code>BasicConfigurator</code> 进行初始化配置，就像 <strong>如何使用Logback</strong> 章节中的一样。</p>
-<h3 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h3><p>以 XML格式 作为示例。</p>
+<p>如果以上配置初始化都不成功，那么 Logback 将使用 <code>BasicConfigurator</code> 进行初始化配置，就像 <strong>如何使用 Logback</strong> 章节中的一样。</p>
+<h3 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h3><p>以 XML 格式 作为示例。</p>
 <p>在 <code>classpath</code> 内的任意位置新建 <code>logback.xml</code> 文件。通常如 <code>src/main/resources/config</code> 或 <code>WEB-INF/config</code>。</p>
 <p>示例内容如下：</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- ConsoleAppender用于输出到控制台 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">appender</span> <span class="attr">name</span>=<span class="string">&quot;STDOUT&quot;</span> <span class="attr">class</span>=<span class="string">&quot;ch.qos.logback.core.ConsoleAppender&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">encoder</span>&gt;</span></span><br><span class="line">      <span class="comment">&lt;!-- 输出内容的格式 --&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">pattern</span>&gt;</span>%d&#123;HH:mm:ss.SSS&#125; [%thread] %-5level %logger&#123;36&#125; - %msg%n<span class="tag">&lt;/<span class="name">pattern</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">encoder</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">appender</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">&lt;!-- 根，有且仅有一个 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">root</span> <span class="attr">level</span>=<span class="string">&quot;debug&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">appender-ref</span> <span class="attr">ref</span>=<span class="string">&quot;STDOUT&quot;</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">root</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -327,10 +306,10 @@
 <h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ul>
 <li><a target="_blank" rel="noopener" href="https://logback.qos.ch/manual/index.html">Logback 官方文档</a></li>
 <li><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000008315137#articleHeader11">logback 配置详解</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/638b4e2c4068">Logback配置使用</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/638b4e2c4068">Logback 配置使用</a></li>
 <li><a target="_blank" rel="noopener" href="https://blog.csdn.net/haidage/article/details/6794509">logback 配置详解（一）</a></li>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/wangjunjun2008/article/details/18732019">Logback介绍及入门</a></li>
-<li><a target="_blank" rel="noopener" href="http://huangpengpeng.iteye.com/blog/2091811">稳定运行一年的logback配置</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/wangjunjun2008/article/details/18732019">Logback 介绍及入门</a></li>
+<li><a target="_blank" rel="noopener" href="http://huangpengpeng.iteye.com/blog/2091811">稳定运行一年的 logback 配置</a></li>
 </ul>
 
     </div>
@@ -359,8 +338,6 @@
 
           <div class="post-tags">
               <a href="/tags/Java/" rel="tag"># Java</a>
-              <a href="/tags/Log/" rel="tag"># Log</a>
-              <a href="/tags/Logback/" rel="tag"># Logback</a>
           </div>
 
         

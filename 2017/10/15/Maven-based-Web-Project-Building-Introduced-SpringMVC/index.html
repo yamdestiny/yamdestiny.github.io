@@ -18,21 +18,20 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha256-5eIC48iZUHmSlSUz9XtjRyK2mzQkHScZY1WdMaoz74E=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"yamdestiny.xyz","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.21.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqus","storage":true,"lazyload":true,"nav":null,"activeClass":"disqus"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"yamdestiny.xyz","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.21.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"hide","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqus","storage":true,"lazyload":true,"nav":null,"activeClass":"disqus"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="搭建 Spring MVC 框架，上接《基于Maven的Web项目搭建》">
+    <meta name="description" content="搭建 Spring MVC 框架，上接《基于 Maven 的 Web 项目搭建》">
 <meta property="og:type" content="article">
 <meta property="og:title" content="基于 Maven 的 Web 项目搭建 - 引入 Spring MVC">
 <meta property="og:url" content="https://yamdestiny.xyz/2017/10/15/Maven-based-Web-Project-Building-Introduced-SpringMVC/index.html">
 <meta property="og:site_name" content="Maple Story">
-<meta property="og:description" content="搭建 Spring MVC 框架，上接《基于Maven的Web项目搭建》">
+<meta property="og:description" content="搭建 Spring MVC 框架，上接《基于 Maven 的 Web 项目搭建》">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://yamdestiny-1254804190.coscd.myqcloud.com/images/new_maven_spring/spring_test_1.png">
 <meta property="article:published_time" content="2017-10-15T13:11:09.000Z">
-<meta property="article:modified_time" content="2024-11-07T15:31:37.310Z">
+<meta property="article:modified_time" content="2024-11-11T08:47:20.283Z">
 <meta property="article:author" content="Maple">
-<meta property="article:tag" content="Java">
-<meta property="article:tag" content="Maven">
+<meta property="article:tag" content="Java Web">
 <meta property="article:tag" content="Spring">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://yamdestiny-1254804190.coscd.myqcloud.com/images/new_maven_spring/spring_test_1.png">
@@ -86,6 +85,7 @@
       <p class="site-title">Maple Story</p>
       <i class="logo-line"></i>
     </a>
+      <p class="site-subtitle" itemprop="description">Welcome to Maple Story 🍁</p>
   </div>
 
   <div class="site-nav-right">
@@ -122,7 +122,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%95%E5%85%A5-Spring-MVC-%E5%8C%85"><span class="nav-number">1.</span> <span class="nav-text">引入 Spring MVC 包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE-Web-xml"><span class="nav-number">2.</span> <span class="nav-text">配置 Web.xml</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B0%E5%BB%BA%E7%9B%AE%E5%BD%95"><span class="nav-number">3.</span> <span class="nav-text">新建目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE-Servlet"><span class="nav-number">4.</span> <span class="nav-text">配置 Servlet</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95"><span class="nav-number">5.</span> <span class="nav-text">测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%8E%E8%AE%B0"><span class="nav-number">6.</span> <span class="nav-text">后记</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%B7%E6%B1%82%E5%A4%84%E7%90%86%E6%B5%81%E7%A8%8B%E7%AE%80%E5%8D%95%E6%8F%8F%E8%BF%B0"><span class="nav-number">6.1.</span> <span class="nav-text">请求处理流程简单描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spring-MVC%E6%9C%80%E5%B0%91%E5%BC%95%E5%85%A5%E5%8C%85"><span class="nav-number">6.2.</span> <span class="nav-text">Spring MVC最少引入包</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="nav-number">7.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%95%E5%85%A5-Spring-MVC-%E5%8C%85"><span class="nav-number">1.</span> <span class="nav-text">引入 Spring MVC 包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE-Web-xml"><span class="nav-number">2.</span> <span class="nav-text">配置 Web.xml</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B0%E5%BB%BA%E7%9B%AE%E5%BD%95"><span class="nav-number">3.</span> <span class="nav-text">新建目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE-Servlet"><span class="nav-number">4.</span> <span class="nav-text">配置 Servlet</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95"><span class="nav-number">5.</span> <span class="nav-text">测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%8E%E8%AE%B0"><span class="nav-number">6.</span> <span class="nav-text">后记</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%B7%E6%B1%82%E5%A4%84%E7%90%86%E6%B5%81%E7%A8%8B%E7%AE%80%E5%8D%95%E6%8F%8F%E8%BF%B0"><span class="nav-number">6.1.</span> <span class="nav-text">请求处理流程简单描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spring-MVC-%E6%9C%80%E5%B0%91%E5%BC%95%E5%85%A5%E5%8C%85"><span class="nav-number">6.2.</span> <span class="nav-text">Spring MVC 最少引入包</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="nav-number">7.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -131,7 +131,7 @@
     <img class="site-author-image" itemprop="image" alt="Maple"
       src="https://p3.music.126.net/Am30CzvY9NTxy1xiz5k3GQ==/7729566744520405.jpg?param=170y170">
   <p class="site-author-name" itemprop="name">Maple</p>
-  <div class="site-description" itemprop="description">以铜为镜，可以正衣冠；<br />以史为镜，可以知兴替；<br />以人为镜，可以明得失。</div>
+  <div class="site-description" itemprop="description">coding trainee</div>
 </div>
 <div class="site-state-wrap animated">
   <nav class="site-state">
@@ -143,12 +143,12 @@
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">48</span>
+        <span class="site-state-item-count">34</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -192,7 +192,7 @@
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Maple Story">
-      <meta itemprop="description" content="以铜为镜，可以正衣冠；<br />以史为镜，可以知兴替；<br />以人为镜，可以明得失。">
+      <meta itemprop="description" content="coding trainee">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
@@ -213,26 +213,6 @@
       <span class="post-meta-item-text">发表于</span>
 
       <time title="创建时间：2017-10-15 21:11:09" itemprop="dateCreated datePublished" datetime="2017-10-15T21:11:09+08:00">2017-10-15</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-11-07 23:31:37" itemprop="dateModified" datetime="2024-11-07T23:31:37+08:00">2024-11-07</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/coder/" itemprop="url" rel="index"><span itemprop="name">coder</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/coder/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a>
-        </span>
     </span>
 
   
@@ -258,7 +238,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>搭建 Spring MVC 框架，上接<a href="/2017/10/15/Maven-based-Web-Project-Building/">《基于Maven的Web项目搭建》</a></p>
+    <div class="post-body" itemprop="articleBody"><p>搭建 Spring MVC 框架，上接<a href="/2017/10/15/Maven-based-Web-Project-Building/">《基于 Maven 的 Web 项目搭建》</a></p>
 <span id="more"></span>
 
 <h2 id="引入-Spring-MVC-包"><a href="#引入-Spring-MVC-包" class="headerlink" title="引入 Spring MVC 包"></a>引入 Spring MVC 包</h2><p>在 Maven 的<code>pom.xml</code>中，添加如下代码</p>
@@ -286,7 +266,7 @@
 <figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page language=<span class="string">&quot;java&quot;</span> contentType=<span class="string">&quot;text/html; charset=UTF-8&quot;</span></span><br><span class="line">    pageEncoding=<span class="string">&quot;UTF-8&quot;</span>%&gt;</span><br><span class="line">&lt;!DOCTYPE html PUBLIC <span class="string">&quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;</span> <span class="string">&quot;http://www.w3.org/TR/html4/loose.dtd&quot;</span>&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;meta http-equiv=<span class="string">&quot;Content-Type&quot;</span> content=<span class="string">&quot;text/html; charset=UTF-8&quot;</span>&gt;</span><br><span class="line">&lt;title&gt;hello&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;p&gt;$&#123; msg &#125;&lt;/p&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
 
 <ol start="3">
-<li>启动Tomcat服务，访问<code>http://localhost:8080/simpleDemo/home/index</code><br><img src="https://yamdestiny-1254804190.coscd.myqcloud.com/images/new_maven_spring/spring_test_1.png" alt="Spring Test" title="Spring Test"></li>
+<li>启动 Tomcat 服务，访问<code>http://localhost:8080/simpleDemo/home/index</code><br><img src="https://yamdestiny-1254804190.coscd.myqcloud.com/images/new_maven_spring/spring_test_1.png" alt="Spring Test" title="Spring Test"></li>
 </ol>
 <h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><h3 id="请求处理流程简单描述"><a href="#请求处理流程简单描述" class="headerlink" title="请求处理流程简单描述"></a>请求处理流程简单描述</h3><ol>
 <li>请求<code>http://localhost:8080/simpleDemo/home/index</code></li>
@@ -296,12 +276,12 @@
 <li>调用<code>home</code>方法后，根据返回类型（<code>String</code>）和返回值（<code>return &quot;index&quot;;</code>），通过<code>spring-servlet.xml</code>中配置的<code>org.springframework.web.servlet.view.InternalResourceViewResolver</code>，在<code>/WEB-INF/views/</code>中，找到<code>index.jsp</code>，渲染视图</li>
 <li>返回给浏览器</li>
 </ol>
-<h3 id="Spring-MVC最少引入包"><a href="#Spring-MVC最少引入包" class="headerlink" title="Spring MVC最少引入包"></a>Spring MVC最少引入包</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">spring-web-<span class="number">4.</span>x.x.RELEASE.jar</span><br><span class="line">spring-beans-<span class="number">4.</span>x.x.RELEASE.jar</span><br><span class="line">spring-context-<span class="number">4.</span>x.x.RELEASE.jar</span><br><span class="line">spring-core-<span class="number">4.</span>x.x.RELEASE.jar</span><br><span class="line">commons-logging-<span class="number">1.1</span><span class="number">.3</span>.jar</span><br><span class="line">spring-webmvc-<span class="number">4.</span>x.x.RELEASE.jar</span><br><span class="line">spring-aop-<span class="number">4.</span>x.x.RELEASE.jar</span><br><span class="line">spring-expression-<span class="number">4.</span>x.x.RELEASE.jar</span><br></pre></td></tr></table></figure>
+<h3 id="Spring-MVC-最少引入包"><a href="#Spring-MVC-最少引入包" class="headerlink" title="Spring MVC 最少引入包"></a>Spring MVC 最少引入包</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">spring-web-<span class="number">4.</span>x.x.RELEASE.jar</span><br><span class="line">spring-beans-<span class="number">4.</span>x.x.RELEASE.jar</span><br><span class="line">spring-context-<span class="number">4.</span>x.x.RELEASE.jar</span><br><span class="line">spring-core-<span class="number">4.</span>x.x.RELEASE.jar</span><br><span class="line">commons-logging-<span class="number">1.1</span><span class="number">.3</span>.jar</span><br><span class="line">spring-webmvc-<span class="number">4.</span>x.x.RELEASE.jar</span><br><span class="line">spring-aop-<span class="number">4.</span>x.x.RELEASE.jar</span><br><span class="line">spring-expression-<span class="number">4.</span>x.x.RELEASE.jar</span><br></pre></td></tr></table></figure>
 
 <h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
-<li><a target="_blank" rel="noopener" href="http://blog.csdn.net/frankcheng5143/article/details/50512340">一个简单的SpringMVC需要哪些jar包[Spring4]</a></li>
-<li><a target="_blank" rel="noopener" href="http://www.cnblogs.com/tobeprogramer/p/4162697.html">基于maven从头搭建springMVC框架</a></li>
-<li><a target="_blank" rel="noopener" href="http://www.cnblogs.com/hehaiyang/p/4578488.html">项目搭建系列之一：使用Maven搭建SpringMVC项目</a></li>
+<li><a target="_blank" rel="noopener" href="http://blog.csdn.net/frankcheng5143/article/details/50512340">一个简单的 SpringMVC 需要哪些 jar 包 [Spring4]</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.cnblogs.com/tobeprogramer/p/4162697.html">基于 maven 从头搭建 springMVC 框架</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.cnblogs.com/hehaiyang/p/4578488.html">项目搭建系列之一：使用 Maven 搭建 SpringMVC 项目</a></li>
 </ul>
 
     </div>
@@ -329,8 +309,7 @@
 </div>
 
           <div class="post-tags">
-              <a href="/tags/Java/" rel="tag"># Java</a>
-              <a href="/tags/Maven/" rel="tag"># Maven</a>
+              <a href="/tags/Java-Web/" rel="tag"># Java Web</a>
               <a href="/tags/Spring/" rel="tag"># Spring</a>
           </div>
 
